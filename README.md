@@ -1,6 +1,6 @@
 # Software Design Patterns in Java
 
-Welcome to the **Software Design Patterns in Java** repository! This collection is perfect for students and individuals preparing for placement interviews, aiming to grasp essential design patterns with clear, real-world Java examples.
+Welcome to the **Software Design Patterns in Java** repository!
 
 ## Table of Contents
 1. [Introduction](#introduction)
