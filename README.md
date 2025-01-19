@@ -79,5 +79,5 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 ## Getting Started
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/sonaniakshit/software-design-patterns-java.git
+   git clone https://github.com/SonaniAkshit/software-design-patterns-java.git
    cd software-design-patterns-java
