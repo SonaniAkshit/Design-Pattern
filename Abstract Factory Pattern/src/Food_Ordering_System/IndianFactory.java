@@ -1,13 +1,13 @@
 package Food_Ordering_System;
 
-public class IndianFactory implements AbstractFactory{
-    public Appetizers getAppetizers(){
+public class IndianFactory implements IAbstractFactory {
+    public IAppetizers getAppetizers(){
         return new Indian_Appetizers();
     }
-    public Desserts getDesserts(){
+    public IDesserts getDesserts(){
         return new Indian_Desserts();
     }
-    public MainCourse getMainCourse(){
+    public IMainCourse getMainCourse(){
         return new Indian_MainCourse();
     }
 }

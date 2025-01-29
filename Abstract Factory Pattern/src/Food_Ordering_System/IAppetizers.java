@@ -1,5 +1,5 @@
 package Food_Ordering_System;
 
-interface Appetizers {
+interface IAppetizers {
     String OrderAppetizers();
 }

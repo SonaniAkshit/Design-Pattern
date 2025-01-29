@@ -1,5 +1,5 @@
 package Food_Ordering_System;
 
-interface MainCourse {
+interface IMainCourse {
     String OrderMainCourse();
 }

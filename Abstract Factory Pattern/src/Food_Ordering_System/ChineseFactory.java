@@ -1,13 +1,13 @@
 package Food_Ordering_System;
 
-public class ChineseFactory implements AbstractFactory {
-    public Appetizers getAppetizers(){
+public class ChineseFactory implements IAbstractFactory {
+    public IAppetizers getAppetizers(){
         return new Chines_Appetizers();
     }
-    public Desserts getDesserts(){
+    public IDesserts getDesserts(){
         return new Chines_Desserts();
     }
-    public MainCourse getMainCourse(){
+    public IMainCourse getMainCourse(){
         return new Chines_MainCourse();
     }
 

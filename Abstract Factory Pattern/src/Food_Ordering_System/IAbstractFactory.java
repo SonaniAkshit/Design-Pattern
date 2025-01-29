@@ -1,17 +1,15 @@
 package Food_Ordering_System;
 
-import java.util.Locale;
+interface IAbstractFactory {
 
-interface AbstractFactory {
+    IAppetizers getAppetizers();
+    IDesserts getDesserts();
+    IMainCourse getMainCourse();
 
-    Appetizers getAppetizers();
-    Desserts getDesserts();
-    MainCourse getMainCourse();
+    static IAbstractFactory getCuisine(String cuisine) {
 
-    static AbstractFactory getCuisine(String cuisine) {
-
-        AbstractFactory factory = null;
-        switch (cuisine.toLowerCase()) {
+        IAbstractFactory factory = null;
+        switch (cuisine) {
             case "Indian":
                 factory = new IndianFactory();
                 break;

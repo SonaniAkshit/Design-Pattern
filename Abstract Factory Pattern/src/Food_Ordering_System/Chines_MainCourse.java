@@ -1,6 +1,6 @@
 package Food_Ordering_System;
 
-public class Chines_MainCourse implements MainCourse {
+public class Chines_MainCourse implements IMainCourse {
     String FoodType;
     Chines_MainCourse() {
         FoodType = "Chines Main Course";
