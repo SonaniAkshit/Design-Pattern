@@ -9,6 +9,7 @@ interface IAbstractFactory {
     static IAbstractFactory getCuisine(String cuisine) {
 
         IAbstractFactory factory = null;
+
         switch (cuisine) {
             case "Indian":
                 factory = new IndianFactory();
@@ -17,15 +18,8 @@ interface IAbstractFactory {
                 factory = new ChineseFactory();
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + cuisine.toLowerCase());
+                throw new IllegalStateException("Unexpected value: " + cuisine);
         }
         return factory;
-
-//        return switch (cuisine.toLowerCase()) {
-//            case "Indian" -> new IndianFactory();
-//            case "Chinese" -> new ChineseFactory();
-//            default -> throw new IllegalArgumentException();
-//        };
-
     }
 }

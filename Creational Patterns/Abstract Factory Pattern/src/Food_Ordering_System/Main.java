@@ -25,8 +25,8 @@ public class Main {
                 Result = De.OrderDesserts();
                 break;
             case "MainCourse":
-                IMainCourse MC = ABS.getMainCourse();
-                Result = MC.OrderMainCourse();
+                IMainCourse Mc = ABS.getMainCourse();
+                Result = Mc.OrderMainCourse();
                 break;
             default:
                 System.out.println("\nInvalid input");
