@@ -5,26 +5,7 @@ This Java project is a console-based **Food Ordering System** that uses the **Ab
 ---
 
 ## 📁 Project Structure
-
-📁 Food_Ordering_System/
-│
-├── IAbstractFactory.java          # Abstract factory interface
-├── IAppetizers.java               # Appetizers interface
-├── IDesserts.java                 # Desserts interface
-├── IMainCourse.java               # Main course interface
-│
-├── IndianFactory.java             # Factory for Indian cuisine
-├── Indian_Appetizers.java         # Indian Appetizers
-├── Indian_Desserts.java           # Indian Desserts
-├── Indian_MainCourse.java         # Indian Main Course
-│
-├── ChineseFactory.java            # Factory for Chinese cuisine
-├── Chines_Appetizers.java         # Chinese Appetizers
-├── Chines_Desserts.java           # Chinese Desserts
-├── Chines_MainCourse.java         # Chinese Main Course
-│
-└── Main.java                      # Main class for interaction
-
+<pre> Food_Ordering_System/ ├── IAbstractFactory.java # Abstract factory interface ├── IAppetizers.java # Appetizers interface ├── IDesserts.java # Desserts interface ├── IMainCourse.java # Main course interface │ ├── IndianFactory.java # Factory for Indian cuisine ├── Indian_Appetizers.java # Indian Appetizers ├── Indian_Desserts.java # Indian Desserts ├── Indian_MainCourse.java # Indian Main Course │ ├── ChineseFactory.java # Factory for Chinese cuisine ├── Chines_Appetizers.java # Chinese Appetizers ├── Chines_Desserts.java # Chinese Desserts ├── Chines_MainCourse.java # Chinese Main Course │ └── Main.java # Main class for interaction </pre>
 ---
 
 ## 📊 Structure & Class Diagram
