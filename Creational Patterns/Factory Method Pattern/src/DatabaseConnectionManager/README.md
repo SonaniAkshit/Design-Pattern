@@ -6,12 +6,55 @@ This Java project is a **console-based Database Connection Manager** that demons
 
 ## 📁 Project Structure
 
-📁 DatabaseConnectionManager/
+<br>📁 DatabaseConnectionManager/
+<br>│
+<br>├── DatabaseFactory.java            # Factory class to return database connection objects
+<br>├── iDatabaseConnection.java        # Interface defining connection methods
+<br>│
+<br>├── MySQLConnection.java            # MySQL database connection implementation
+<br>├── PostgreSQLConnection.java       # PostgreSQL database connection implementation
+<br>├── MongoDBConnection.java          # MongoDB database connection implementation
+<br>│
+<br>└── Main.java                       # Main class for user interaction
 
 
 ---
 
 ## 🧱 Class Diagram
+
+              +---------------------------+
+              |   iDatabaseConnection     |<-------------------------+
+              |---------------------------|                          |
+              | +connect() : String       |                          |
+              | +query()   : String       |                          |
+              | +disconnect() : String    |                          |
+              +---------------------------+                          |
+                        ▲                                            |
+                        |                                            |
+        +----------------------------+                     +----------------------------+
+        |     MySQLConnection        |                     |   PostgreSQLConnection      |
+        +----------------------------+                     +----------------------------+
+        | +connect() : String        |                     | +connect() : String        |
+        | +query() : String          |                     | +query() : String          |
+        | +disconnect() : String     |                     | +disconnect() : String     |
+        +----------------------------+                     +----------------------------+
+                        ▲                                            ▲
+                        |                                            |
+                        |                                            |
+                 +-----------------------------------------------+
+                 |             MongoDBConnection                 |
+                 +-----------------------------------------------+
+                 | +connect() : String                           |
+                 | +query() : String                             |
+                 | +disconnect() : String                        |
+                 +-----------------------------------------------+
+
+                             +------------------------------+
+                             |       DatabaseFactory        |
+                             |------------------------------|
+                             | +getDatabaseConnection(int)  |
+                             +------------------------------+
+
 
 
 ---
