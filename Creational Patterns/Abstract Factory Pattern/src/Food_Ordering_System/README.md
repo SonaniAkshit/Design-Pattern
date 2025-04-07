@@ -8,22 +8,22 @@ This Java project is a console-based **Food Ordering System** that uses the **Ab
 
 - Food_Ordering_System/
 
-    <br>IAbstractFactory.java         - Interface for the abstract factory
-    <br>IAppetizers.java              - Interface for appetizers
-    <br>IDesserts.java                - Interface for desserts
-    <br>IMainCourse.java              - Interface for main course
+    <br>IAbstractFactory.java         &nbsp;# Interface for the abstract factory
+    <br>IAppetizers.java              &nbsp;# Interface for appetizers
+    <br>IDesserts.java                &nbsp;# Interface for desserts
+    <br>IMainCourse.java              &nbsp;# Interface for main course
 
-    <br>IndianFactory.java            - Concrete factory for Indian cuisine
-    <br>Indian_Appetizers.java        - Indian appetizers
-    <br>Indian_Desserts.java          - Indian desserts
-    <br>Indian_MainCourse.java        - Indian main course
+    <br>IndianFactory.java            &nbsp;# Concrete factory for Indian cuisine
+    <br>Indian_Appetizers.java        &nbsp;# Indian appetizers
+    <br>Indian_Desserts.java          &nbsp;# Indian desserts
+    <br>Indian_MainCourse.java        &nbsp;# Indian main course
 
-    <br>ChineseFactory.java           - Concrete factory for Chinese cuisine
-    <br>Chines_Appetizers.java        - Chinese appetizers
-    <br>Chines_Desserts.java          - Chinese desserts
-    <br>Chines_MainCourse.java        - Chinese main course
+    <br>ChineseFactory.java           &nbsp;# Concrete factory for Chinese cuisine
+    <br>Chines_Appetizers.java        &nbsp;# Chinese appetizers
+    <br>Chines_Desserts.java          &nbsp;# Chinese desserts
+    <br>Chines_MainCourse.java        &nbsp;# Chinese main course
 
-    <br>Main.java                     - Entry point for user interaction
+    <br>Main.java                     &nbsp;# Entry point for user interaction
 
 ---
 
