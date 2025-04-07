@@ -6,24 +6,24 @@ This Java project is a console-based **Food Ordering System** that uses the **Ab
 
 ## 📁 Project Structure
 
-- Food_Ordering_System/
-
-    <br>IAbstractFactory.java         &nbsp;# Interface for the abstract factory
-    <br>IAppetizers.java              &nbsp;# Interface for appetizers
-    <br>IDesserts.java                &nbsp;# Interface for desserts
-    <br>IMainCourse.java              &nbsp;# Interface for main course
-
-    <br>IndianFactory.java            &nbsp;# Concrete factory for Indian cuisine
-    <br>Indian_Appetizers.java        &nbsp;# Indian appetizers
-    <br>Indian_Desserts.java          &nbsp;# Indian desserts
-    <br>Indian_MainCourse.java        &nbsp;# Indian main course
-
-    <br>ChineseFactory.java           &nbsp;# Concrete factory for Chinese cuisine
-    <br>Chines_Appetizers.java        &nbsp;# Chinese appetizers
-    <br>Chines_Desserts.java          &nbsp;# Chinese desserts
-    <br>Chines_MainCourse.java        &nbsp;# Chinese main course
-
-    <br>Main.java                     &nbsp;# Entry point for user interaction
+<br>📁 Food_Ordering_System/
+<br>│
+<br>├── IAbstractFactory.java          # Abstract factory interface
+<br>├── IAppetizers.java               # Appetizers interface
+<br>├── IDesserts.java                 # Desserts interface
+<br>├── IMainCourse.java               # Main course interface
+<br>│
+<br>├── IndianFactory.java             # Factory for Indian cuisine
+<br>├── Indian_Appetizers.java         # Indian Appetizers
+<br>├── Indian_Desserts.java           # Indian Desserts
+<br>├── Indian_MainCourse.java         # Indian Main Course
+<br>│
+<br>├── ChineseFactory.java            # Factory for Chinese cuisine
+<br>├── Chines_Appetizers.java         # Chinese Appetizers
+<br>├── Chines_Desserts.java           # Chinese Desserts
+<br>├── Chines_MainCourse.java         # Chinese Main Course
+<br>│
+<br>└── Main.java                      # Main class for interaction
 
 ---
 
