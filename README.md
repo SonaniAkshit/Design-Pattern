@@ -13,7 +13,6 @@ This repository is designed to help Java developers understand and implement cor
 ## 📁 Project Structure
 
 <br>Design-Pattern-Java/
-
  <br>Creational Pattern/
     <br>abstractfactory/
     <br>src/
