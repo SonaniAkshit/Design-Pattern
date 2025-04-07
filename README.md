@@ -34,15 +34,16 @@ Design-Pattern-Java/
 │   └── proxy/
 │       └── src/
 
-└── Behavioral Pattern/
-    ├── chainofresponsibility/
-    │   └── src/
-    ├── state/
-    │   └── src/
-    ├── strategy/
-    │   └── src/
-    └── observer/
-        └── src/
+-- Behavioral Pattern/
+   ├── chainofresponsibility/
+   │   └── src/
+   ├── state/
+   │   └── src/
+   ├── strategy/
+   │   └── src/
+   └── observer/
+       └── src/
+
 --- 
 
 Each folder contains:
