@@ -13,15 +13,15 @@ This repository is designed to help Java developers understand and implement cor
 ## 📁 Project Structure
 
 <br>Design-Pattern-Java/
- <br>Creational Pattern/
-    <br>abstractfactory/
-    <br>src/
-    <br>factorymethod/
-    <br>src/
-    <br>singleton/
-    <br>src/
-    <br>prototype/
-    <br>src/
+ &nbsp;<br>Creational Pattern/
+    &nbsp;<br>abstractfactory/
+    &nbsp;<br>src/
+    &nbsp;<br>factorymethod/
+    &nbsp;<br>src/
+    &nbsp;<br>singleton/
+    &nbsp;<br>src/
+    &nbsp;<br>prototype/
+    &nbsp;<br>src/
 
     Structural Pattern/
 │   ├── adapter/
