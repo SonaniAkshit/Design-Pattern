@@ -29,36 +29,46 @@ This Java project is a console-based **Food Ordering System** that uses the **Ab
 
 ## 📊 Structure & Class Diagram
 
-         +----------------------+
-         |  IAbstractFactory    |<-------------------------+
-         |----------------------|                          |
-         | +getAppetizers()     |                          |
-         | +getDesserts()       |                          |
-         | +getMainCourse()     |                          |
-         +----------------------+                          |
-                 ▲                                        ▲
-     +-------------------+                    +-------------------+
-     |  IndianFactory     |                    |  ChineseFactory   |
-     +-------------------+                    +-------------------+
-     | +getAppetizers()  |                    | +getAppetizers()  |
-     | +getDesserts()    |                    | +getDesserts()    |
-     | +getMainCourse()  |                    | +getMainCourse()  |
-     +-------------------+                    +-------------------+
-            ▲       ▲       ▲                        ▲       ▲       ▲
-            |       |       |                        |       |       |
-+---------------------------+            +---------------------------+
-| Indian_Appetizers         |            | Chines_Appetizers         |
-+---------------------------+            +---------------------------+
-| +OrderAppetizers()        |            | +OrderAppetizers()        |
-+---------------------------+            +---------------------------+
-| Indian_Desserts           |            | Chines_Desserts           |
-+---------------------------+            +---------------------------+
-| +OrderDesserts()          |            | +OrderDesserts()          |
-+---------------------------+            +---------------------------+
-| Indian_MainCourse         |            | Chines_MainCourse         |
-+---------------------------+            +---------------------------+
-| +OrderMainCourse()        |            | +OrderMainCourse()        |
-+---------------------------+            +---------------------------+
+                               +------------------------+
+                             |    IAbstractFactory    |
+                             +------------------------+
+                             | + getAppetizers()      |
+                             | + getDesserts()        |
+                             | + getMainCourse()      |
+                             +------------------------+
+                                       ▲
+                      ----------------|-----------------
+                      |                                  |
+          +---------------------+              +---------------------+
+          |    IndianFactory    |              |   ChineseFactory    |
+          +---------------------+              +---------------------+
+          | + getAppetizers()   |              | + getAppetizers()   |
+          | + getDesserts()     |              | + getDesserts()     |
+          | + getMainCourse()   |              | + getMainCourse()   |
+          +---------------------+              +---------------------+
+              ▲       ▲     ▲                      ▲       ▲     ▲
+              |       |     |                      |       |     |
++---------------------------+        +----------------------------+
+| Indian_Appetizers         |        | Chines_Appetizers          |
+| implements IAppetizers    |        | implements IAppetizers     |
++---------------------------+        +----------------------------+
+| + OrderAppetizers()       |        | + OrderAppetizers()        |
++---------------------------+        +----------------------------+
+
++---------------------------+        +----------------------------+
+| Indian_Desserts           |        | Chines_Desserts            |
+| implements IDesserts      |        | implements IDesserts       |
++---------------------------+        +----------------------------+
+| + OrderDesserts()         |        | + OrderDesserts()          |
++---------------------------+        +----------------------------+
+
++---------------------------+        +----------------------------+
+| Indian_MainCourse         |        | Chines_MainCourse          |
+| implements IMainCourse    |        | implements IMainCourse     |
++---------------------------+        +----------------------------+
+| + OrderMainCourse()       |        | + OrderMainCourse()        |
++---------------------------+        +----------------------------+
++---------------------------+
 
 ---
 
