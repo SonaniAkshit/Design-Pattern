@@ -12,36 +12,24 @@ This repository is designed to help Java developers understand and implement cor
 
 ## 📁 Project Structure
 
-<br>Design-Pattern-Java/
- &nbsp;&nbsp;&nbsp;&nbsp;<br>Creational Pattern/
-    &nbsp;<br>abstractfactory/
-    &nbsp;<br>src/
-    &nbsp;<br>factorymethod/
-    &nbsp;<br>src/
-    &nbsp;<br>singleton/
-    &nbsp;<br>src/
-    &nbsp;<br>prototype/
-    &nbsp;<br>src/
-
-    Structural Pattern/
-│   ├── adapter/
-│   │   └── src/
-│   ├── decorator/
-│   │   └── src/
-│   ├── facade/
-│   │   └── src/
-│   └── proxy/
-│       └── src/
-
-└── Behavioral Pattern/
-    ├── chainofresponsibility/
-    │   └── src/
-    ├── state/
-    │   └── src/
-    ├── strategy/
-    │   └── src/
-    └── observer/
-        └── src/
+<br>Food_Ordering_System/
+<br>│
+<br>├── IAbstractFactory.java         # Interface for the abstract factory
+<br>├── IAppetizers.java              # Interface for appetizers
+<br>├── IDesserts.java                # Interface for desserts
+<br>├── IMainCourse.java              # Interface for main course
+<br>│
+<br>├── IndianFactory.java            # Concrete factory for Indian cuisine
+<br>├── Indian_Appetizers.java        # Indian appetizers
+<br>├── Indian_Desserts.java          # Indian desserts
+<br>├── Indian_MainCourse.java        # Indian main course
+<br>│
+<br>├── ChineseFactory.java           # Concrete factory for Chinese cuisine
+<br>├── Chines_Appetizers.java        # Chinese appetizers
+<br>├── Chines_Desserts.java          # Chinese desserts
+<br>├── Chines_MainCourse.java        # Chinese main course
+<br>│
+<br>└── Main.java                     # Entry point for user interaction
 
 
 --- 
