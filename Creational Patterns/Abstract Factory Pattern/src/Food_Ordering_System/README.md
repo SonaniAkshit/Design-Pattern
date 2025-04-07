@@ -1,0 +1,101 @@
+# 🍽️ Food Ordering System - Abstract Factory Design Pattern (Java)
+
+This Java project is a console-based **Food Ordering System** that uses the **Abstract Factory Design Pattern** to simulate food ordering from different cuisines (e.g., Indian and Chinese). Users can select a cuisine and then choose a type of dish (Appetizers, Main Course, or Desserts).
+
+---
+
+## 📁 Project Structure
+
+📁 Food_Ordering_System/
+│
+├── IAbstractFactory.java          # Abstract factory interface
+├── IAppetizers.java               # Appetizers interface
+├── IDesserts.java                 # Desserts interface
+├── IMainCourse.java               # Main course interface
+│
+├── IndianFactory.java             # Factory for Indian cuisine
+├── Indian_Appetizers.java         # Indian Appetizers
+├── Indian_Desserts.java           # Indian Desserts
+├── Indian_MainCourse.java         # Indian Main Course
+│
+├── ChineseFactory.java            # Factory for Chinese cuisine
+├── Chines_Appetizers.java         # Chinese Appetizers
+├── Chines_Desserts.java           # Chinese Desserts
+├── Chines_MainCourse.java         # Chinese Main Course
+│
+└── Main.java                      # Main class for interaction
+
+---
+
+## 📊 Structure & Class Diagram
+
+         +----------------------+
+         |  IAbstractFactory    |<-------------------------+
+         |----------------------|                          |
+         | +getAppetizers()     |                          |
+         | +getDesserts()       |                          |
+         | +getMainCourse()     |                          |
+         +----------------------+                          |
+                 ▲                                        ▲
+     +-------------------+                    +-------------------+
+     |  IndianFactory     |                    |  ChineseFactory   |
+     +-------------------+                    +-------------------+
+     | +getAppetizers()  |                    | +getAppetizers()  |
+     | +getDesserts()    |                    | +getDesserts()    |
+     | +getMainCourse()  |                    | +getMainCourse()  |
+     +-------------------+                    +-------------------+
+            ▲       ▲       ▲                        ▲       ▲       ▲
+            |       |       |                        |       |       |
++---------------------------+            +---------------------------+
+| Indian_Appetizers         |            | Chines_Appetizers         |
++---------------------------+            +---------------------------+
+| +OrderAppetizers()        |            | +OrderAppetizers()        |
++---------------------------+            +---------------------------+
+| Indian_Desserts           |            | Chines_Desserts           |
++---------------------------+            +---------------------------+
+| +OrderDesserts()          |            | +OrderDesserts()          |
++---------------------------+            +---------------------------+
+| Indian_MainCourse         |            | Chines_MainCourse         |
++---------------------------+            +---------------------------+
+| +OrderMainCourse()        |            | +OrderMainCourse()        |
++---------------------------+            +---------------------------+
+
+---
+
+## 👥 Participants
+
+| Role                    | Description |
+|-------------------------|-------------|
+| `Main.java`             | Acts as the client. Takes user input and uses the factory to create appropriate dishes. |
+| `IAbstractFactory`      | Abstract interface for all cuisine factories. |
+| `IndianFactory`, `ChineseFactory` | Concrete factories for different cuisines. |
+| `IAppetizers`, `IDesserts`, `IMainCourse` | Interfaces for product categories. |
+| `Indian_*`, `Chines_*` Classes    | Concrete implementations of dishes based on cuisine and category. |
+
+---
+
+## ✅ Consequences of Using Abstract Factory
+
+### ✅ Advantages
+- Easy to extend and maintain.
+- Encourages loose coupling and clear separation of concerns.
+- Supports the Open/Closed Principle.
+
+### ⚠️ Disadvantages
+- Can introduce complexity due to a large number of classes.
+- Adding a new dish type (e.g., Beverages) requires changes across all factories and interfaces.
+
+---
+
+## 🧪 How to Run
+
+1. Compile the Java files:
+
+```bash
+javac Food_Ordering_System/*.java
+
+Enter the [Indian,Chinese]
+Indian
+Enter the cuisine name [Appetizers,Desserts,MainCourse]
+MainCourse
+Indian Main Course Ordered
