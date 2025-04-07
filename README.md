@@ -11,25 +11,38 @@ This repository is designed to help Java developers understand and implement cor
 ---
 
 ## 📁 Project Structure
-
-<br>Food_Ordering_System/
+<br>
+<br>Design-Pattern-Java/
 <br>│
-<br>├── IAbstractFactory.java         # Interface for the abstract factory
-<br>├── IAppetizers.java              # Interface for appetizers
-<br>├── IDesserts.java                # Interface for desserts
-<br>├── IMainCourse.java              # Interface for main course
-<br>│
-<br>├── IndianFactory.java            # Concrete factory for Indian cuisine
-<br>├── Indian_Appetizers.java        # Indian appetizers
-<br>├── Indian_Desserts.java          # Indian desserts
-<br>├── Indian_MainCourse.java        # Indian main course
-<br>│
-<br>├── ChineseFactory.java           # Concrete factory for Chinese cuisine
-<br>├── Chines_Appetizers.java        # Chinese appetizers
-<br>├── Chines_Desserts.java          # Chinese desserts
-<br>├── Chines_MainCourse.java        # Chinese main course
-<br>│
-<br>└── Main.java                     # Entry point for user interaction
+<br>├── Creational Pattern/
+<br>│   ├── abstractfactory/
+<br>│   │   └── src/
+<br>│   ├── factorymethod/
+<br>│   │   └── src/
+<br>│   ├── singleton/
+<br>│   │   └── src/
+<br>│   └── prototype/
+<br>│       └── src/
+<br>
+<br>├── Structural Pattern/
+<br>│   ├── adapter/
+<br>│   │   └── src/
+<br>│   ├── decorator/
+<br>│   │   └── src/
+<br>│   ├── facade/
+<br>│   │   └── src/
+<br>│   └── proxy/
+<br>│       └── src/
+<br>
+<br>└── Behavioral Pattern/
+    <br>├── chainofresponsibility/
+    <br>│   └── src/
+    <br>├── state/
+    <br>│   └── src/
+    <br>├── strategy/
+    <br>│   └── src/
+    <br>└── observer/
+        <br>└── src/
 
 
 --- 
