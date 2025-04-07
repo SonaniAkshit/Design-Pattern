@@ -1,83 +1,90 @@
-# Software Design Patterns in Java
+# 🎯 Java Design Patterns (GoF) Collection
 
-Welcome to the **Software Design Patterns in Java** repository!
+Welcome to the **Java Design Patterns (GoF)** repository! This project demonstrates the power of **Gang of Four (GoF)** design patterns with real-world, **mini systems** implemented in Java. Each pattern is clearly explained and organized into categories with dedicated examples.
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Design Patterns Overview](#design-patterns-overview)
-3. [Creational Patterns](#creational-patterns)
-    - Singleton
-    - Factory Method
-    - Abstract Factory
-    - Builder
-    - Prototype
-4. [Structural Patterns](#structural-patterns)
-    - Adapter
-    - Bridge
-    - Composite
-    - Decorator
-    - Facade
-    - Flyweight
-    - Proxy
-5. [Behavioral Patterns](#behavioral-patterns)
-    - Chain of Responsibility
-    - Command
-    - Interpreter
-    - Iterator
-    - Mediator
-    - Memento
-    - Observer
-    - State
-    - Strategy
-    - Template Method
-    - Visitor
-6. [Getting Started](#getting-started)
-7. [Contributing](#contributing)
-8. [License](#license)
+---
 
-## Introduction
-Understanding design patterns is crucial for writing robust, maintainable, and scalable software. This repository provides a comprehensive guide to the most common design patterns used in Java programming. Each pattern includes an explanation, UML diagram, and code example.
+## 🧠 About the Project
 
-## Design Patterns Overview
-Design patterns are typical solutions to common problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
+This repository is designed to help Java developers understand and implement core **Design Patterns** using practical, easy-to-understand **mini Java systems**. It covers **Creational**, **Structural**, and **Behavioral** design patterns, following best coding practices.
 
-### Creational Patterns
-These patterns provide various object creation mechanisms, increasing flexibility and reuse of existing code.
+---
 
-- **Singleton**: Ensures a class has only one instance.
-- **Factory Method**: Creates instances of several derived classes.
-- **Abstract Factory**: Creates instances of several families of classes.
-- **Builder**: Constructs complex objects step by step.
-- **Prototype**: Creates a new object by copying an existing one.
+## 📁 Project Structure
 
-### Structural Patterns
-These patterns explain how to assemble objects and classes into larger structures while keeping the structures flexible and efficient.
+Design-Pattern-Java/
+│
+├── Creational Pattern/
+│   ├── abstractfactory/
+│   │   └── src/
+│   ├── factorymethod/
+│   │   └── src/
+│   ├── singleton/
+│   │   └── src/
+│   └── prototype/
+│       └── src/
 
-- **Adapter**: Allows incompatible classes to work together.
-- **Bridge**: Separates an object’s abstraction from its implementation.
-- **Composite**: Composes objects into tree structures to represent part-whole hierarchies.
-- **Decorator**: Adds additional behaviors to objects dynamically.
-- **Facade**: Provides a simplified interface to a complex system.
-- **Flyweight**: Reduces the cost of creating and manipulating a large number of similar objects.
-- **Proxy**: Provides a surrogate or placeholder for another object.
+├── Structural Pattern/
+│   ├── adapter/
+│   │   └── src/
+│   ├── decorator/
+│   │   └── src/
+│   ├── facade/
+│   │   └── src/
+│   └── proxy/
+│       └── src/
 
-### Behavioral Patterns
-These patterns are concerned with algorithms and the assignment of responsibilities between objects.
+└── Behavioral Pattern/
+    ├── chainofresponsibility/
+    │   └── src/
+    ├── state/
+    │   └── src/
+    ├── strategy/
+    │   └── src/
+    └── observer/
+        └── src/
+--- 
 
-- **Chain of Responsibility**: Passes a request among a chain of handlers.
-- **Command**: Encapsulates a request as an object.
-- **Interpreter**: Implements a specialized language.
-- **Iterator**: Provides a way to access the elements of an aggregate object sequentially.
-- **Mediator**: Defines simplified communication between classes.
-- **Memento**: Captures and restores an object's internal state.
-- **Observer**: Allows a subject to notify observers of changes.
-- **State**: Allows an object to alter its behavior when its internal state changes.
-- **Strategy**: Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
-- **Template Method**: Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps.
-- **Visitor**: Represents an operation to be performed on elements of an object structure.
+Each folder contains:
+- 📄 **Java source code**
+- 🧪 **Mini project/system** implementing the pattern
+- 📘 Simple explanations comments,Structure Diagram,Class Diagram,Participants and Consequences
 
-## Getting Started
+---
+
+## 🧰 Covered Design Patterns
+
+### 🔨 Creational Patterns
+- **Abstract Factory** – Create families of related objects without specifying classes
+- **Factory Method** – Define an interface for creating an object, but let subclasses decide the instantiation
+- **Singleton** – Ensure a class has only one instance and provide a global access point
+- **Prototype** – Clone objects instead of creating new ones
+
+### 🏗️ Structural Patterns
+- **Adapter** – Bridge between incompatible interfaces
+- **Decorator** – Attach new behaviors to objects dynamically
+- **Façade** – Provide a simplified interface to a complex subsystem
+- **Proxy** – Represent another object with more control or access
+
+### 🔁 Behavioral Patterns
+- **Chain of Responsibility** – Pass requests along a chain of handlers
+- **State** – Alter behavior when an object’s internal state changes
+- **Strategy** – Define a family of algorithms and make them interchangeable
+- **Observer** – Notify multiple objects about state changes
+
+---
+
+## 💻 Language & Tools
+
+- 💡 **Language:** Java (JDK 8+)
+- 📦 **Structure:** OOP principles
+- ✅ **Tested:** All patterns compiled and tested with basic use cases
+
+---
+
+## 🚀 Getting Started
+
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/SonaniAkshit/software-design-patterns-java.git
-   cd software-design-patterns-java
+   git clone https://github.com/SonaniAkshit/Design-Patterns-Java.git
+   cd Design-Patterns-Java
