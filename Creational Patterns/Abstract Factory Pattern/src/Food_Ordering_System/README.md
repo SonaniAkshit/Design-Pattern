@@ -27,7 +27,7 @@ This Java project is a console-based **Food Ordering System** that uses the **Ab
 
 ---
 
-## 📊 Structure & Class Diagram
+## 📊 Class Diagram
 
               +----------------------+
              |  IAbstractFactory    |<-------------------------+
