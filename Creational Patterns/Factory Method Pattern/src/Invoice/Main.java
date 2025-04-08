@@ -12,7 +12,7 @@ public class Main {
             choice = sc.nextInt();
 
             if (choice == 0) {
-                System.out.println("Exiting...");
+                System.out.println("Exiting....");
                 break;
             }
 
