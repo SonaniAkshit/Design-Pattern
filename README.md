@@ -57,22 +57,22 @@ Each folder contains:
 ## 🧰 Covered Design Patterns
 
 ### 🔨 Creational Patterns
-- **Abstract Factory** – Create families of related objects without specifying classes
-- **Factory Method** – Define an interface for creating an object, but let subclasses decide the instantiation
-- **Singleton** – Ensure a class has only one instance and provide a global access point
+✔️ **Abstract Factory** – Create families of related objects without specifying classes
+✔️ **Factory Method** – Define an interface for creating an object, but let subclasses decide the instantiation
+✔️ **Singleton** – Ensure a class has only one instance and provide a global access point
 - **Prototype** – Clone objects instead of creating new ones
 
 ### 🏗️ Structural Patterns
 - **Adapter** – Bridge between incompatible interfaces
-- **Decorator** – Attach new behaviors to objects dynamically
-- **Façade** – Provide a simplified interface to a complex subsystem
-- **Proxy** – Represent another object with more control or access
+✔️ **Decorator** – Attach new behaviors to objects dynamically
+✔️ **Facade** – Provide a simplified interface to a complex subsystem
+✔️ **Proxy** – Represent another object with more control or access
 
 ### 🔁 Behavioral Patterns
-- **Chain of Responsibility** – Pass requests along a chain of handlers
+✔️ **Chain of Responsibility** – Pass requests along a chain of handlers
 - **State** – Alter behavior when an object’s internal state changes
 - **Strategy** – Define a family of algorithms and make them interchangeable
-- **Observer** – Notify multiple objects about state changes
+✔️ **Observer** – Notify multiple objects about state changes
 
 ---
 
