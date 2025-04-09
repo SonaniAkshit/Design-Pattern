@@ -58,12 +58,17 @@ Design-Patterns/ Creational Patterns/ AbstractFactory Pattern/ src/ Food_Orderin
 - ✅ **Status:** All implemented patterns are compiled and tested with sample use cases
 
 ---
-
 ## 🚀 Getting Started
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/SonaniAkshit/Design-Patterns-Java.git
    cd Design-Patterns-Java
+___
+![Java](https://img.shields.io/badge/language-Java-blue.svg)
+
+[//]: # (![Build]&#40;https://img.shields.io/badge/build-passing-brightgreen.svg&#41;)
+[//]: # (![License]&#40;https://img.shields.io/badge/license-MIT-lightgrey.svg&#41;)
+![Stars](https://img.shields.io/github/stars/SonaniAkshit/Design-Pattern?style=social)
 
 
