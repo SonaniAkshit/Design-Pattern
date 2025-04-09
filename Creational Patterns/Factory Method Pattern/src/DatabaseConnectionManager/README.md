@@ -5,7 +5,7 @@ This Java project is a **console-based Database Connection Manager** that demons
 ---
 ## 🎯 Intent
 
-"Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses." – GoF Book
+> "**Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses." – GoF Book
 
 ---
 ## 💡 Use Case
