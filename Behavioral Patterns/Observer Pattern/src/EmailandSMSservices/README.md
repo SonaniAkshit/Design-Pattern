@@ -6,7 +6,7 @@ This project demonstrates the **Observer Design Pattern** as described in the *"
 
 ## 🎯 Intent
 
-> "Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically." – *GoF Book*
+ "Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically." – *GoF Book*
 
 ---
 
