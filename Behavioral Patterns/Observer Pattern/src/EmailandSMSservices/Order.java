@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Order {
     private String status;
-    private List<Observer> observers = new ArrayList<>();
+    private List<iObserver> observers = new ArrayList<>();
 
-    public void addObserver(Observer observer) {
+    public void addObserver(iObserver observer) {
         observers.add(observer);
     }
 
@@ -18,7 +18,7 @@ public class Order {
     }
 
     private void notifyObservers() {
-        for (Observer observer : observers) {
+        for (iObserver observer : observers) {
             observer.update(status);
         }
     }

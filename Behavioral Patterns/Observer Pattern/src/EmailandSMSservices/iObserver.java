@@ -1,5 +1,5 @@
 package EmailandSMSservices;
 
-public interface Observer {
+public interface iObserver {
     void update(String status);
 }
