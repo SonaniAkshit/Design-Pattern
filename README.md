@@ -57,9 +57,9 @@ Each folder contains:
 ## 🧰 Covered Design Patterns
 
 ### 🔨 Creational Patterns
-✔ **Abstract Factory** – Create families of related objects without specifying classes
-✔ **Factory Method** – Define an interface for creating an object, but let subclasses decide the instantiation
-✔ **Singleton** – Ensure a class has only one instance and provide a global access point
+- **Abstract Factory** – Create families of related objects without specifying classes
+- **Factory Method** – Define an interface for creating an object, but let subclasses decide the instantiation
+- **Singleton** – Ensure a class has only one instance and provide a global access point
 - **Prototype** – Clone objects instead of creating new ones
 
 ### 🏗️ Structural Patterns
