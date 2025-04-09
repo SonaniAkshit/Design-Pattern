@@ -46,7 +46,7 @@ This Java project is a console-based **Food Ordering System** that uses the **Ab
          | +getDesserts()    |                  _____________________________           | +getDesserts()    |
          | +getMainCourse()  |                  |      <<IAppetizers>>      |           | +getMainCourse()  |
          +-------------------+                  +---------------------------+           +-------------------+
-            ◇       ◇       ◇                   |+OrderAppetizers()         |              ◇       ◇       ◇      
+            ◇       ◇       ◇                 |+OrderAppetizers()         |              ◇       ◇       ◇      
             |       |       |                   +---------------------------+              |       |       |
       +---------------------------+                           ▲                      +---------------------------+
       | Indian_Appetizers         |__________________________________________________| Chines_Appetizers         |
