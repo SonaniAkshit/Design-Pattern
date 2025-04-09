@@ -44,7 +44,7 @@ This Java project is a **console-based Database Connection Manager** that demons
               | +connect() : String       |                                   |------------------------------|
               | +query()   : String       |                                   | +getDatabaseConnection(int)  |
               | +disconnect() : String    |                                   +------------------------------+
-              +---------------------------+                                                   ◇ 
+              +---------------------------+                                                  🔶 
                             ▲                                                                 | 
                             |                                                                 +---------------+ 
                             +----------------------------+                                                    |
