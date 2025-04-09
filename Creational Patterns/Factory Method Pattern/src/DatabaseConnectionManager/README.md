@@ -20,8 +20,21 @@ This Java project is a **console-based Database Connection Manager** that demons
 
 ---
 ## 🧱 Structure Diagram
-
-
+             +---------------+                        +-----------------+
+             |   Product     |                        |     Product     |
+             +---------------+                        +-----------------+
+                     ▲                                | FactoryMethod() |             
+                     |                                | AnOperation()   |
+                     |                                +-----------------+
+                     |                                         ▲
+                     |                                         |
+          +---------------------+                              |
+          |   ConcreteProduct   |◄ ------------------ +-----------------+ 
+          +---------------------+                     |     Product     | 
+                                                      +-----------------+ 
+                                                      | FactoryMethod() |
+                                                      +-----------------+
+  
 ---
 ## 🧱 Class Diagram
 
