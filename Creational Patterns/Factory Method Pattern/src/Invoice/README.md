@@ -19,6 +19,23 @@ This Java project is a console-based **Invoice Generator** that uses the **Facto
 <br>└── Main.java                                  # Main class to interact with user
 
 ---
+## 🧱 Structure Diagram
+             +---------------+                        +-----------------+
+             |   Product     |                        |     Product     |
+             +---------------+                        +-----------------+
+                     ▲                                | FactoryMethod() |             
+                     |                                | AnOperation()   |
+                     |                                +-----------------+
+                     |                                         ▲
+                     |                                         |
+          +---------------------+                              |
+          |   ConcreteProduct   |◄ ------------------ +-----------------+ 
+          +---------------------+                     |     Product     | 
+                                                      +-----------------+ 
+                                                      | FactoryMethod() |
+                                                      +-----------------+
+  
+---
 
 ## 🧠 Class Diagram
 
