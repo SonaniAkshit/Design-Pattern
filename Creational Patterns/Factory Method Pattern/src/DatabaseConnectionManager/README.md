@@ -19,7 +19,10 @@ This Java project is a **console-based Database Connection Manager** that demons
 
 
 ---
+## 🧱 Structure Diagram
 
+
+---
 ## 🧱 Class Diagram
 
               +---------------------------+
