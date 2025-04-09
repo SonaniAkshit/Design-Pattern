@@ -47,8 +47,8 @@ This Java project is a **console-based Database Connection Manager** that demons
         | +query() : String          |     | +query() : String          |       | +query() : String       |   |
         | +disconnect() : String     |     | +disconnect() : String     |       | +disconnect() : String  |   |
         +----------------------------+     +----------------------------+       +-------------------------+   |
-                       |                                                                                      |
-                       |                                                                                      |  
+                       |                                 |                                  |                 |
+                       |                                 |                                  |                 |  
                        +--------------------------------------------------------------------------------------+                                                                                          +      
                  
                  
