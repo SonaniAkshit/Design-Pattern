@@ -39,7 +39,7 @@ Design-Patterns/ Creational Patterns/ AbstractFactory Pattern/ src/ Food_Orderin
 | ✅ Factory              | ❌ Adapter             | ❌ Chain of Responsibility    |
 | ✅ Abstract Factory     | ❌ Bridge              | ❌ Command                    |
 | ❌ Builder              | ❌ Composite           | ❌ Iterator                   |
-| ❌ Prototype            | ❌ Decorator           | ❌ Mediator                   |
+| ❌ Prototype            | ✅ Decorator           | ❌ Mediator                   |
 | ✅ Singleton            | ❌ Facade              | ❌ Memento                    |
 |                        | ❌ Flyweight           | ✅ Observer                   |
 |                        | ❌ Proxy               | ❌ State                      |
