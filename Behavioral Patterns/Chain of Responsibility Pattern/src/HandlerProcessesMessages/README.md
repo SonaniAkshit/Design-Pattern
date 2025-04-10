@@ -1,4 +1,4 @@
-# 🔗 Chain of Responsibility Pattern
+# 🔗 Handler Processes Messages - Chain of Responsibility Pattern
 
 This is a very simple implementation of the **Chain of Responsibility** design pattern in Java for students and beginners.
 
