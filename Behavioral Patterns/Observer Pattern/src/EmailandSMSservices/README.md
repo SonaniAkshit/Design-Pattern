@@ -73,11 +73,13 @@ An `Order` (Subject) notifies `EmailObserver` and `SMSObserver` (Observers) when
     ├── Order.java
     └── Main.java
 ---
-## 🚀 How to Compile and Run
+## 🚀 Compile & Run
+
+```java
     javac EmailandSMSservices/*.java
     java EmailandSMSservices.Main
----
-## 🖥️ Sample Output
+
+    🖥️Output
     Email Notification: Order status changed to PLACED
     SMS Notification: Order status changed to PLACED
     Email Notification: Order status changed to SHIPPED
