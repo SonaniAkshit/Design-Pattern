@@ -34,18 +34,18 @@ Design-Patterns/ Creational Patterns/ AbstractFactory Pattern/ src/ Food_Orderin
 
 ## 🧰 Covered Design Patterns(TO-DO List)
 
-| 🔨 Creational Patterns | 🏗️ Structural Patterns | 🔁 Behavioral Patterns       |
-|------------------------|------------------------|------------------------------|
-| ✅ Factory              | ❌ Adapter             | ❌ Chain of Responsibility    |
-| ✅ Abstract Factory     | ❌ Bridge              | ❌ Command                    |
-| ❌ Builder              | ❌ Composite           | ❌ Iterator                   |
-| ❌ Prototype            | ✅ Decorator           | ❌ Mediator                   |
-| ✅ Singleton            | ✅ Facade              | ❌ Memento                    |
-|                        | ❌ Flyweight           | ✅ Observer                   |
-|                        | ✅ Proxy               | ❌ State                      |
-|                        |                        | ❌ Strategy                   |
-|                        |                        | ❌ Template Method            |
-|                        |                        | ❌ Visitor                    |
+| 🔨 Creational Patterns | 🏗️ Structural Patterns | 🔁 Behavioral Patterns         |
+|------------------------|------------------------|--------------------------------|
+| ✅ Factory              | ❌ Adapter             | ✅ Chain of Responsibility(COR) |
+| ✅ Abstract Factory     | ❌ Bridge              | ❌ Command                      |
+| ❌ Builder              | ❌ Composite           | ❌ Iterator                     |
+| ❌ Prototype            | ✅ Decorator           | ❌ Mediator                     |
+| ✅ Singleton            | ✅ Facade              | ❌ Memento                      |
+|                        | ❌ Flyweight           | ✅ Observer                     |
+|                        | ✅ Proxy               | ❌ State                        |
+|                        |                        | ❌ Strategy                     |
+|                        |                        | ❌ Template Method              |
+|                        |                        | ❌ Visitor                      |
 
 ✅ = Implemented | ❌ = Coming Soon
 
