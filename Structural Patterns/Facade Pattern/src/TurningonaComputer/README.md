@@ -92,7 +92,7 @@ When starting a computer, many low-level operations (freezing CPU, reading from 
 
 ### 🛠️ Compile & Run the Program
 
-```bash
+```java
 javac IOEnhancer/*.java
 
 ▶️
