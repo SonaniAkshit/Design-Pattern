@@ -73,6 +73,15 @@ In this example, a message is passed through a chain of handlers:
 - Hard to trace how requests move through the chain in large systems.
 ---
 
+## 📁 Folder Structure
+    HandlerProcessesMessages/
+    ├── Handler.java
+    ├── InfoHandler.java
+    ├── DebugHandler.java
+    ├── ErrorHandler.java
+    └── Main.java
+---
+
 ## 🚀 Compile & Run
 
 ```java
