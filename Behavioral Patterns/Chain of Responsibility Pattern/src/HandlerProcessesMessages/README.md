@@ -75,7 +75,7 @@ In this example, a message is passed through a chain of handlers:
 
 ## 🚀 Compile & Run
 
-````java
+```java
 🛠️ Compile
 javac HandlerProcessesMessages/*.java
 
