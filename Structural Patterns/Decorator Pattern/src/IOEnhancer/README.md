@@ -79,7 +79,7 @@ All decorators are dynamically added at runtime without changing the base stream
 
 ## 🚀 How to Compile and Run
 
-```bash
+```java
 javac IOEnhancer/*.java
 java IOEnhancer.Main
 
