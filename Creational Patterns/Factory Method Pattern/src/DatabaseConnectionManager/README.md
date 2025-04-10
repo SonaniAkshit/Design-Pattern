@@ -16,7 +16,7 @@ A DatabaseFactory provides database connection objects (MySQLConnection, Postgre
 
 ## 🧱 Structure Diagram(ref. GoF)
              +---------------+                        +-----------------+
-             |   Product     |                        |     Product     |
+             |   Product     |                        |     Creator     |
              +---------------+                        +-----------------+
                      ▲                                | FactoryMethod() |             
                      |                                | AnOperation()   |
@@ -25,7 +25,7 @@ A DatabaseFactory provides database connection objects (MySQLConnection, Postgre
                      |                                         |
           +---------------------+                              |
           |   ConcreteProduct   |◄ ------------------ +-----------------+ 
-          +---------------------+                     |     Product     | 
+          +---------------------+                     | ConcreteCreator | 
                                                       +-----------------+ 
                                                       | FactoryMethod() |
                                                       +-----------------+
