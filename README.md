@@ -42,7 +42,7 @@ Design-Patterns/ Creational Patterns/ AbstractFactory Pattern/ src/ Food_Orderin
 | ❌ Prototype            | ✅ Decorator           | ❌ Mediator                     |
 | ✅ Singleton            | ✅ Facade              | ❌ Memento                      |
 |                        | ❌ Flyweight           | ✅ Observer                     |
-|                        | ✅ Proxy               | ❌ State                        |
+|                        | ✅ Proxy               | ✅ State                        |
 |                        |                        | ❌ Strategy                     |
 |                        |                        | ❌ Template Method              |
 |                        |                        | ❌ Visitor                      |
