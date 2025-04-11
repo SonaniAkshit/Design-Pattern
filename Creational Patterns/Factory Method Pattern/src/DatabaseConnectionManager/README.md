@@ -93,30 +93,6 @@ A DatabaseFactory provides database connection objects (MySQLConnection, Postgre
 ---
 ## 📁 Project Structure
 
-    @startuml
-    Bob -[#red]> Alice : hello
-    Alice -[#0000FF]->Bob : ok
-    @enduml
-
-    @startuml
-    
-    class Product
-    
-    class Creator {
-    +FactoryMethod()
-    +AnOperation()
-    }
-    
-    class ConcreteProduct
-    class ConcreteCreator
-    
-    Product <|-- ConcreteProduct
-    Creator <|-- ConcreteCreator
-    ConcreteCreator --> ConcreteProduct
-    
-    @enduml
-
-
     DatabaseConnectionManager/
     ├── iDatabaseConnection.java      # Common interface
     ├── MySQLConnection.java          # MySQL implementation
@@ -154,5 +130,4 @@ Running MySQL query...
 
 > 3
 Disconnected from MySQL Database.
-
 
