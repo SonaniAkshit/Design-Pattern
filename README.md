@@ -70,8 +70,3 @@ ___
 [//]: # (![Build]&#40;https://img.shields.io/badge/build-passing-brightgreen.svg&#41;)
 [//]: # (![License]&#40;https://img.shields.io/badge/license-MIT-lightgrey.svg&#41;)
 ![Stars](https://img.shields.io/github/stars/SonaniAkshit/Design-Pattern?style=social)
-
-@startuml
-Bob -[#red]> Alice : hello
-Alice -[#0000FF]->Bob : ok
-@enduml
