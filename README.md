@@ -1,4 +1,4 @@
-# 🎯 Java Design Patterns (GoF) Collection
+# 🎯 Java Design Patterns (GoF) Collection 
 
 Welcome to the **Java Design Patterns (GoF)** repository! This project demonstrates the power of **Gang of Four (GoF)** design patterns through real-world **mini systems** implemented in Java. Each pattern is neatly explained and organized into categories with dedicated examples.
 
