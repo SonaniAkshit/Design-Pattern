@@ -520,7 +520,7 @@ The **Singleton pattern** is used when there is a need to manage shared resource
 
 ---
 # 🏗️Structural Patterns
-# 🧰 Decorator Pattern
+# 🏗️ Decorator Pattern
 
 ---
 
@@ -606,7 +606,7 @@ The **Decorator Pattern** applies the principle of **composition over inheritanc
 
 ---
 
-# 🧰 Facade Pattern
+# 🏗️ Facade Pattern
 
 ---
 
@@ -686,7 +686,7 @@ The **Façade Pattern** adheres to the principle of **Encapsulation** by hiding 
 
 ---
 
-# 🛡️ Proxy Pattern
+# 🏗️️ Proxy Pattern
 
 ---
 
@@ -782,9 +782,9 @@ The Proxy Pattern separates the responsibility of access control or additional b
 ---
 
 # 🔁Behavioral Patterns
-# 🔁 Chain of Responsibility Pattern
 
----
+
+# 🔁 Chain of Responsibility Pattern
 
 ## 📌 Intent
 
@@ -877,8 +877,6 @@ ___
 
 # 🔁 State Pattern
 
----
-
 ## 📌 Intent
 
 > **“Allow an object to alter its behavior when its internal state changes.  
@@ -958,8 +956,6 @@ Use the **State pattern** when:
 > Each state class encapsulates behavior specific to a single state.
 ---
 # 🔁 Strategy Pattern
-
----
 
 ## 📌 Intent
 
@@ -1041,8 +1037,6 @@ Use the **Strategy pattern** when:
 > Each strategy has one responsibility: implementing a single algorithm.
 ---
 # 🔁 Observer Pattern
-
----
 
 ## 📌 Intent
 
@@ -1133,8 +1127,25 @@ Use the **Observer pattern** when:
 
 > The subject and observers depend on abstractions (interfaces), not concrete implementations.
 ---
+
+---
+
+## 🙏 Thank You!
+
+Thank you for exploring the **Gang of Four (GoF) Java Design Patterns** with this project.  
+Whether you're a student, developer, or enthusiast — I hope this repository helped you **learn, revise, or implement** patterns with clarity and confidence.
+
+If you found this helpful, feel free to ⭐ star the repo and share it with your fellow Java learners!
+
+---
+
+Happy Coding! 💻☕  
+— *Sonani Akshit (MCA Student)*
+
+---
 ![Java](https://img.shields.io/badge/language-Java-blue.svg)
 
 [//]: # (![Build]&#40;https://img.shields.io/badge/build-passing-brightgreen.svg&#41;)
 [//]: # (![License]&#40;https://img.shields.io/badge/license-MIT-lightgrey.svg&#41;)
 ![Stars](https://img.shields.io/github/stars/SonaniAkshit/Design-Pattern?style=social)
+

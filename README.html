@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%F0%9F%8E%AF-java-design-patterns-gof-collection">🎯 Java Design Patterns (GoF) Collection</h1>
+<p>Welcome to the <strong>Java Design Patterns (GoF)</strong> repository! This project demonstrates the power of <strong>Gang of Four (GoF)</strong> design patterns through real-world <strong>mini systems</strong> implemented in Java. Each pattern is neatly explained and organized into categories with dedicated examples.</p>
+<hr>
+<h1 id="%F0%9F%A7%A0-about-the-project">🧠 About the Project</h1>
+<p>This repository is built to help Java developers <strong>learn, understand, and implement</strong> core <strong>Design Patterns</strong> through practical, easy-to-understand <strong>mini Java systems</strong>. It covers the three main categories:</p>
+<ul>
+<li>🛠️ <strong>Creational Patterns</strong></li>
+<li>🏗️ <strong>Structural Patterns</strong></li>
+<li>🔁 <strong>Behavioral Patterns</strong></li>
+</ul>
+<p>All examples follow <strong>best coding practices</strong> and include visual aids and commentary to enhance comprehension.</p>
+<hr>
+<h2 id="%F0%9F%93%81-project-structure">📁 Project Structure</h2>
+<ul>
+<li>📂 Example path:
+Design-Patterns/ Creational Patterns/ AbstractFactory Pattern/ src/ Food_Ordering_System/</li>
+</ul>
+<hr>
+<h3 id="each-pattern-is-organized-in-its-own-folder-and-includes">Each pattern is organized in its own folder and includes:</h3>
+<ul>
+<li>📄 Java source code</li>
+<li>🧪 A mini project/system implementing the pattern</li>
+<li>📘 Inline comments, structure diagram, class diagram, participants, and consequences</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%A7%B0-covered-design-patternsto-do-list">🧰 Covered Design Patterns(TO-DO List)</h2>
+<table>
+<thead>
+<tr>
+<th>🔨 Creational Patterns</th>
+<th>🏗️ Structural Patterns</th>
+<th>🔁 Behavioral Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ Factory</td>
+<td>❌ Adapter</td>
+<td>✅ Chain of Responsibility(COR)</td>
+</tr>
+<tr>
+<td>✅ Abstract Factory</td>
+<td>❌ Bridge</td>
+<td>❌ Command</td>
+</tr>
+<tr>
+<td>❌ Builder</td>
+<td>❌ Composite</td>
+<td>❌ Iterator</td>
+</tr>
+<tr>
+<td>❌ Prototype</td>
+<td>✅ Decorator</td>
+<td>❌ Mediator</td>
+</tr>
+<tr>
+<td>✅ Singleton</td>
+<td>✅ Facade</td>
+<td>❌ Memento</td>
+</tr>
+<tr>
+<td></td>
+<td>❌ Flyweight</td>
+<td>✅ Observer</td>
+</tr>
+<tr>
+<td></td>
+<td>✅ Proxy</td>
+<td>✅ State</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>❌ Strategy</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>❌ Template Method</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>❌ Visitor</td>
+</tr>
+</tbody>
+</table>
+<p>✅ = Implemented | ❌ = Coming Soon</p>
+<hr>
+<h2 id="%F0%9F%92%BB-language--tools">💻 Language &amp; Tools</h2>
+<ul>
+<li>💡 <strong>Language:</strong> Java (JDK 8+)</li>
+<li>🧱 <strong>Architecture:</strong> Object-Oriented Programming (OOP)</li>
+<li>✅ <strong>Status:</strong> All implemented patterns are compiled and tested with sample use cases</li>
+</ul>
+<hr>
+<h1 id="%F0%9F%93%98-what-is-a-design-pattern">📘 What is a Design Pattern?</h1>
+<h2 id="%E2%9C%85-definition-based-on-gof">✅ Definition (Based on GoF)</h2>
+<p>A <strong>design pattern</strong> is a <strong>reusable solution</strong> to a <strong>common problem</strong> that occurs in software design.</p>
+<p>It is <strong>not a complete code</strong>, but a <strong>template or guide</strong> for how to solve a problem that keeps coming up in different projects.</p>
+<blockquote>
+<p><strong>GoF Definition:</strong><br>
+&quot;<em>A design pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem in such a way that you can use this solution a million times over, without ever doing it the same way twice.</em>&quot;</p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%A7%A0-key-points">🧠 Key Points</h2>
+<ul>
+<li>Design patterns are <strong>tried and tested solutions</strong>.</li>
+<li>They are <strong>language-independent</strong> (but can be implemented in Java, C++, etc.).</li>
+<li>Improve <strong>code reuse</strong>, <strong>flexibility</strong>, and <strong>maintainability</strong>.</li>
+<li>GoF categorized <strong>23 design patterns</strong> into:
+<ul>
+<li><strong>Creational Patterns</strong></li>
+<li><strong>Structural Patterns</strong></li>
+<li><strong>Behavioral Patterns</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="%F0%9F%A7%AD-how-to-select-a-design-pattern--solve-design-problems--gof-way">🧭 How to Select a Design Pattern &amp; Solve Design Problems ? (GoF Way)</h1>
+<h2 id="%E2%9C%85-step-by-step-approach-from-gof">✅ Step-by-Step Approach from GoF</h2>
+<p>The <strong>Gang of Four (GoF)</strong> suggests using patterns by <strong>understanding the problem first</strong>, then finding a pattern that fits. Here's how:</p>
+<hr>
+<h2 id="%F0%9F%9B%A0%EF%B8%8F-1-understand-the-problem">🛠️ 1. Understand the Problem</h2>
+<ul>
+<li><strong>What are you trying to solve?</strong></li>
+<li>Is it about <strong>object creation</strong>, <strong>object structure</strong>, or <strong>object behavior</strong>?</li>
+<li>Example questions:
+<ul>
+<li>Do you want to restrict object creation? (→ <em>Creational</em>)</li>
+<li>Do you want to make objects easier to change or extend? (→ <em>Structural</em>)</li>
+<li>Do you want objects to communicate flexibly? (→ <em>Behavioral</em>)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%8D-2-classify-the-problem">🔍 2. Classify the Problem</h2>
+<p>Check what kind of problem you're solving:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Pattern Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object creation</td>
+<td>Creational</td>
+</tr>
+<tr>
+<td>Class structure</td>
+<td>Structural</td>
+</tr>
+<tr>
+<td>Object behavior</td>
+<td>Behavioral</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%A7%A9-3-look-for-similar-use-cases">🧩 3. Look for Similar Use Cases</h2>
+<p>Read the <strong>intent</strong> and <strong>applicability</strong> section of each pattern in the GoF book.</p>
+<p>Example:</p>
+<blockquote>
+<p>Want to ensure only one instance of a class?<br>
+✅ Use <strong>Singleton Pattern</strong></p>
+</blockquote>
+<hr>
+<h1 id="%F0%9F%92%A1-what-do-you-mean-by-%22instance%22-in-java">💡 What Do You Mean by &quot;Instance&quot; in Java?</h1>
+<h2 id="%E2%9C%85-definition">✅ Definition</h2>
+<p>An <strong>instance</strong> is a <strong>concrete object</strong> created from a <strong>class</strong>.<br>
+You can think of a class as a <strong>blueprint</strong>, and an instance as the <strong>actual object</strong> built using that blueprint.</p>
+<hr>
+<h2 id="%F0%9F%8F%A0-real-life-analogy">🏠 Real-life Analogy</h2>
+<ul>
+<li><strong>Class</strong> = House Blueprint</li>
+<li><strong>Instance</strong> = The actual House built from that blueprint</li>
+</ul>
+<p>So when you create an object using <code>new</code>, you're <strong>instantiating</strong> a class — creating an instance!</p>
+<hr>
+<h2 id="%E2%98%95-java-example">☕ Java Example</h2>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>{
+    String name;
+
+    Student(String name) {
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Hello, my name is "</span> + name);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Student s1 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">"Aman"</span>); <span class="hljs-comment">// s1 is an instance of Student</span>
+        Student s2 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">"Riya"</span>); <span class="hljs-comment">// s2 is another instance</span>
+
+        s1.sayHello();  <span class="hljs-comment">// Output: Hello, my name is Aman</span>
+        s2.sayHello();  <span class="hljs-comment">// Output: Hello, my name is Riya</span>
+    }
+}
+</div></code></pre>
+<hr>
+<h2 id="%F0%9F%A7%A0-4-use-pattern-selection-hints-gof-tips">🧠 4. Use Pattern Selection Hints (GoF Tips)</h2>
+<p>GoF provides clues based on problem types:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Pattern Suggestion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You want to vary object creation</td>
+<td>Abstract Factory, Builder, Prototype</td>
+</tr>
+<tr>
+<td>You want one object only</td>
+<td>Singleton</td>
+</tr>
+<tr>
+<td>You want to compose objects into trees</td>
+<td>Composite</td>
+</tr>
+<tr>
+<td>You want to change behavior at runtime</td>
+<td>Strategy, State</td>
+</tr>
+<tr>
+<td>You want to avoid tight coupling</td>
+<td>Observer, Mediator</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%E2%98%95-example-solving-with-design-pattern-in-java">☕ Example: Solving with Design Pattern in Java</h2>
+<p><strong>Problem:</strong> You need to create different types of documents (PDF, Word) but don’t want to hardcode creation.</p>
+<p><strong>Solution:</strong> Use <strong>Factory Method</strong> pattern.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Document</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PDFDocument</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Document</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Opening PDF Document"</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordDocument</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Document</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">"Opening Word Document"</span>);
+    }
+}
+
+<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> Document <span class="hljs-title">createDocument</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PDFApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Document <span class="hljs-title">createDocument</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> PDFDocument();
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WordApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Document <span class="hljs-title">createDocument</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> WordDocument();
+    }
+}
+</div></code></pre>
+<h1 id="%F0%9F%9B%A0%EF%B8%8F-creational-pattern">🛠️ Creational Pattern</h1>
+<h1 id="%F0%9F%9B%A0%EF%B8%8Fabstract-factory-pattern">🛠️Abstract Factory Pattern</h1>
+<h2 id="%F0%9F%93%8C-intent">📌 Intent</h2>
+<blockquote>
+<p><strong>&quot;Provide an interface for creating families of related or dependent objects without specifying their concrete classes.&quot;</strong><br>
+(GoF, Design Patterns: Elements of Reusable Object-Oriented Software, Page 87)</p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%A7%BE-also-known-as">🧾 Also Known As</h2>
+<ul>
+<li><strong>Kit</strong> (mentioned informally in the GoF book)</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 Applicability (When to Use)</h2>
+<p>Use the Abstract Factory pattern when:</p>
+<ul>
+<li>You want to create families of related objects that must be used together.</li>
+<li>You want to enforce consistency among products.</li>
+<li>You want to hide the concrete classes from the client code.</li>
+<li>The system should be independent of how its products are created, composed, and represented.</li>
+</ul>
+<p>(Reference: GoF, Page 88)</p>
+<hr>
+<h2 id="%F0%9F%91%A5-participants-gof-book-page-90">👥 Participants (GoF Book, Page 90)</h2>
+<ol>
+<li><strong>AbstractFactory</strong></li>
+</ol>
+<ul>
+<li>Declares an interface for operations that create abstract product objects.</li>
+</ul>
+<ol start="2">
+<li><strong>ConcreteFactory</strong></li>
+</ol>
+<ul>
+<li>Implements the operations to create concrete product objects.</li>
+</ul>
+<ol start="3">
+<li><strong>AbstractProduct</strong></li>
+</ol>
+<ul>
+<li>Declares an interface for a type of product object.</li>
+</ul>
+<ol start="4">
+<li><strong>ConcreteProduct</strong></li>
+</ol>
+<ul>
+<li>Defines a product object to be created by the corresponding concrete factory.</li>
+</ul>
+<ol start="5">
+<li><strong>Client</strong></li>
+</ol>
+<ul>
+<li>Uses only interfaces declared by AbstractFactory and AbstractProduct classes.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%A0%EF%B8%8F-consequences-gof-book-page-91">⚠️ Consequences (GoF Book, Page 91)</h2>
+<ul>
+<li>✅ It <strong>isolates concrete classes</strong>.</li>
+<li>✅ It makes it easy to <strong>exchange product families</strong>.</li>
+<li>✅ Promotes <strong>consistency among products</strong>.</li>
+<li>❌ It can be <strong>difficult to support new kinds of products</strong> (requires changing the factory interface).</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns-gof-book-page-95">🔗 Related Patterns (GoF Book, Page 95)</h2>
+<table>
+<thead>
+<tr>
+<th>Related Pattern</th>
+<th>Why Related?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Factory Method</strong></td>
+<td>Abstract Factory is often implemented using Factory Methods.</td>
+</tr>
+<tr>
+<td><strong>Prototype</strong></td>
+<td>Sometimes used instead of factories if many product configurations are possible.</td>
+</tr>
+<tr>
+<td><strong>Builder</strong></td>
+<td>Used for assembling complex products step by step, but Abstract Factory focuses on families of products.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%A7%A0-principles-used-in-abstract-factory-pattern">🧠 Principles Used in <strong>Abstract Factory</strong> Pattern</h2>
+<h3 id="open-closed-principle-ocp"><strong>Open-Closed Principle (OCP)</strong></h3>
+<ul>
+<li><strong>Why it's used:</strong> The Abstract Factory adheres to the <strong>Open-Closed Principle</strong>. You can introduce new families of products by adding new concrete factories, without altering existing client code.</li>
+<li><strong>Benefit:</strong> It makes it easy to extend the system with new product families without breaking the existing system or requiring modifications to the client code.</li>
+</ul>
+<hr>
+<h2 id="%E2%9D%93-why-use-the-abstract-factory-pattern">❓ Why Use the Abstract Factory Pattern?</h2>
+<p>The <strong>Abstract Factory</strong> pattern is used for several important reasons. It provides a way to create families of related objects without specifying their concrete classes. Below are some key reasons to use the Abstract Factory pattern:</p>
+<h3 id="1-ensures-consistency-among-products">1. <strong>Ensures Consistency Among Products</strong></h3>
+<ul>
+<li>The Abstract Factory ensures that the client can only create objects that belong to the same family, thereby ensuring consistency between related objects.</li>
+<li>It helps in enforcing a consistent theme or style, like creating buttons, checkboxes, and other UI components with the same visual appearance across different platforms.</li>
+</ul>
+<h3 id="2-promotes-loose-coupling">2. <strong>Promotes Loose Coupling</strong></h3>
+<ul>
+<li>Just like the Factory Method, the Abstract Factory promotes loose coupling between the client code and concrete classes.</li>
+<li>The client interacts only with abstract products and factories, never knowing or depending on the specific implementation of the products.</li>
+<li>This allows you to change the family of products without affecting the client code.</li>
+</ul>
+<h3 id="3-eases-product-family-variations">3. <strong>Eases Product Family Variations</strong></h3>
+<ul>
+<li>The Abstract Factory is ideal when the system should be independent of how its products are created, composed, and represented.</li>
+<li>It allows you to create different sets of products (like different themes or platform-specific components) without changing the rest of the system.</li>
+<li>You can easily add new families of related products as needed.</li>
+</ul>
+<h3 id="4-encourages-code-reusability">4. <strong>Encourages Code Reusability</strong></h3>
+<ul>
+<li>It fosters reusability by centralizing object creation in factory classes, ensuring that product families are created consistently throughout the application.</li>
+<li>The pattern allows easy extension to accommodate new product families by adding new concrete factories without modifying existing code.</li>
+</ul>
+<h3 id="5-facilitates-future-extension">5. <strong>Facilitates Future Extension</strong></h3>
+<ul>
+<li>Adding new types of products to a system often requires changes in the factory. With the Abstract Factory pattern, new product families can be added without altering existing client code.</li>
+<li>This supports the <strong>Open-Closed Principle</strong>, making it easy to extend the system to support new product families.</li>
+</ul>
+<h3 id="6-encourages-platform-independence">6. <strong>Encourages Platform Independence</strong></h3>
+<ul>
+<li>In cases where a system needs to support multiple platforms (e.g., different UI toolkits for different operating systems), the Abstract Factory pattern can help abstract platform-specific details and provide platform-independent code for the client.</li>
+</ul>
+<h3 id="7-simplifies-object-creation-for-complex-families">7. <strong>Simplifies Object Creation for Complex Families</strong></h3>
+<ul>
+<li>When products within a family have complex relationships or need to be created together, the Abstract Factory provides a structured way to create the entire family without exposing the details to the client.</li>
+</ul>
+<h3 id="example-scenario">Example Scenario:</h3>
+<p>Consider a system that needs to create UI components such as buttons and checkboxes in two different styles: <strong>Light Theme</strong> and <strong>Dark Theme</strong>. The Abstract Factory pattern allows you to create families of related objects (buttons and checkboxes) for both themes, and the client code can interact with abstract product interfaces, keeping it decoupled from the concrete product classes.</p>
+<p>By using the Abstract Factory pattern, you ensure that the client always creates products that belong to the same theme (Light or Dark) without having to know the details of how each product is implemented.</p>
+<p>Thus, the <strong>Abstract Factory</strong> pattern helps in managing complex product families, ensuring consistency, and promoting flexibility and maintainability in your code.</p>
+<h1 id="%F0%9F%9B%A0%EF%B8%8F-factory-method-pattern">🛠️ Factory Method Pattern</h1>
+<h2 id="%F0%9F%93%8C-intent">📌 Intent</h2>
+<blockquote>
+<p><strong>&quot;Define an interface for creating an object, but let subclasses alter the type of objects that will be created.&quot;</strong><br>
+This pattern allows a class to delegate the responsibility of creating an object to its subclasses, without specifying the exact class of object that will be created.</p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%A7%BE-also-known-as">🧾 Also Known As</h2>
+<ul>
+<li><strong>Virtual Constructor</strong></li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 Applicability (When to Use)</h2>
+<p>Use the <strong>Factory Method</strong> pattern when:</p>
+<ul>
+<li>You need to create objects of a class, but you don’t want to specify the exact class of the object.</li>
+<li>You want to let subclasses decide which class to instantiate.</li>
+<li>You want to control the instantiation process of a class.</li>
+<li>You need to delegate the responsibility of object creation to child classes.</li>
+</ul>
+<p>Example use cases:</p>
+<ul>
+<li>When the class cannot anticipate the type of objects it needs to create.</li>
+<li>When the client code shouldn't be aware of the specific class types and their instantiation details.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%91%A5-participants">👥 Participants</h2>
+<ol>
+<li><strong>Creator (Abstract Class)</strong></li>
+</ol>
+<ul>
+<li>Declares the factory method, which returns an object of type Product.</li>
+<li>May also define a default implementation of the factory method.</li>
+</ul>
+<ol start="2">
+<li><strong>ConcreteCreator (Concrete Class)</strong></li>
+</ol>
+<ul>
+<li>Implements the factory method to create a specific product object.</li>
+</ul>
+<ol start="3">
+<li><strong>Product (Abstract Class)</strong></li>
+</ol>
+<ul>
+<li>Declares an interface for objects created by the factory method.</li>
+</ul>
+<ol start="4">
+<li><strong>ConcreteProduct (Concrete Class)</strong></li>
+</ol>
+<ul>
+<li>Implements the <code>Product</code> interface and defines the objects that are created by the factory method.</li>
+</ul>
+<ol start="5">
+<li><strong>Client</strong></li>
+</ol>
+<ul>
+<li>Uses the <code>Creator</code> class and its factory method to create a <code>Product</code>.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%A0%EF%B8%8F-consequences">⚠️ Consequences</h2>
+<p>The <strong>Factory Method</strong> pattern has several advantages and disadvantages:</p>
+<h3 id="%E2%9C%85-benefits">✅ Benefits:</h3>
+<ul>
+<li><strong>Loose coupling</strong>: The client code is decoupled from the concrete class of the object being created.</li>
+<li><strong>Subclasses can decide the product type</strong>: The decision of which object to instantiate is delegated to subclasses.</li>
+<li><strong>More flexible and extensible</strong>: You can introduce new products without modifying the existing code.</li>
+</ul>
+<h3 id="%E2%9D%8C-drawbacks">❌ Drawbacks:</h3>
+<ul>
+<li><strong>Increase in number of classes</strong>: You may end up with more classes, especially when there are several concrete product variants.</li>
+<li><strong>Requires a hierarchy of creators</strong>: If there are multiple creators, it can lead to more complex code and hierarchy.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns">🔗 Related Patterns</h2>
+<table>
+<thead>
+<tr>
+<th>Related Pattern</th>
+<th>Why Related?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Abstract Factory</strong></td>
+<td>The Abstract Factory pattern uses Factory Methods to create a family of related objects.</td>
+</tr>
+<tr>
+<td><strong>Prototype</strong></td>
+<td>If you want to clone an object instead of creating a new one, the Prototype pattern is an alternative.</td>
+</tr>
+<tr>
+<td><strong>Builder</strong></td>
+<td>The Builder pattern creates complex objects step-by-step. It's useful when you need to control the creation process in greater detail.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%A7%A0-principles-used-in-factory-method-pattern">🧠 Principles Used in <strong>Factory Method</strong> Pattern</h2>
+<h3 id="open-closed-principle-ocp"><strong>Open-Closed Principle (OCP)</strong></h3>
+<ul>
+<li><strong>Why it's used:</strong> The Factory Method follows the <strong>Open-Closed Principle</strong> because the client code can easily add new types of products without modifying existing code. To add a new product, you only need to introduce a new concrete class and extend the factory.</li>
+<li><strong>Benefit:</strong> The system can evolve without affecting existing functionality, making it flexible and adaptable to future requirements.</li>
+</ul>
+<hr>
+<h2 id="%E2%9D%93-why-use-the-factory-method-pattern">❓ Why Use the Factory Method Pattern?</h2>
+<p>The <strong>Factory Method</strong> pattern is widely used for several reasons:</p>
+<h3 id="1-promotes-loose-coupling">1. <strong>Promotes Loose Coupling</strong></h3>
+<ul>
+<li>The Factory Method separates the creation logic of objects from the client code. This reduces the dependency between client code and concrete product classes.</li>
+<li>By using the Factory Method, client code interacts with a product interface, not knowing or caring about the specific class that implements the product.</li>
+</ul>
+<h3 id="2-enhances-flexibility">2. <strong>Enhances Flexibility</strong></h3>
+<ul>
+<li>The pattern provides flexibility in terms of the types of objects that can be created. New types of products can be added without modifying the client code or other parts of the application.</li>
+<li>You can change the product that’s created by modifying the concrete creator class, without changing the code that uses the product.</li>
+</ul>
+<h3 id="3-subclasses-decide-the-object-creation">3. <strong>Subclasses Decide the Object Creation</strong></h3>
+<ul>
+<li>The responsibility of object creation is delegated to subclasses, allowing them to decide which specific class to instantiate. This can be especially useful when the exact type of object to be created is not known until runtime.</li>
+</ul>
+<h3 id="4-fosters-code-reusability">4. <strong>Fosters Code Reusability</strong></h3>
+<ul>
+<li>By defining the object creation in a common method, the code can be reused in different parts of the program or across different projects.</li>
+<li>If multiple creators share the same method of creating products, they can all use the same base class or interface, promoting code reuse.</li>
+</ul>
+<h3 id="5-helps-in-code-maintenance">5. <strong>Helps in Code Maintenance</strong></h3>
+<ul>
+<li>The pattern simplifies code maintenance by isolating the object creation logic from the rest of the code. Changes to how an object is created (e.g., switching from one implementation to another) can be confined to the factory method, avoiding widespread changes across the system.</li>
+</ul>
+<h3 id="6-encourages-open-closed-principle">6. <strong>Encourages Open-Closed Principle</strong></h3>
+<ul>
+<li>The Factory Method pattern encourages the open-closed principle, where you can add new product types without changing the existing code. You just need to create a new subclass of the creator and implement the factory method.</li>
+</ul>
+<h3 id="7-improves-testability">7. <strong>Improves Testability</strong></h3>
+<ul>
+<li>Since object creation is abstracted, it's easier to mock or substitute real product instances with test doubles or stubs during unit testing. This improves the testability of the application.</li>
+</ul>
+<h3 id="example-scenario">Example Scenario:</h3>
+<p>You are designing a system that needs to work with multiple types of documents (e.g., PDFs, Word files). By using the <strong>Factory Method</strong>, you can define an interface for document creation, allowing subclasses to decide which document type to create without modifying the existing code where documents are processed.</p>
+<p>Thus, the <strong>Factory Method</strong> pattern helps in managing complex object creation while keeping your code maintainable, flexible, and scalable.</p>
+<hr>
+<h1 id="%F0%9F%9B%A0%EF%B8%8F-singleton-pattern-gof">🛠️ <strong>Singleton Pattern</strong> (GoF)</h1>
+<h2 id="%F0%9F%93%8C-intent">📌 Intent</h2>
+<blockquote>
+<p><strong>&quot;Ensure a class has only one instance, and provide a global point of access to it.&quot;</strong><br>
+(GoF, Design Patterns: Elements of Reusable Object-Oriented Software, Page 127)</p>
+</blockquote>
+<p>The <strong>Singleton pattern</strong> ensures that a class has only one instance and provides a global access point to that instance. This pattern is often used when a single shared resource (like a configuration manager, logging service, or database connection) needs to be accessed across different parts of an application.</p>
+<hr>
+<h2 id="%F0%9F%A7%BE-also-known-as">🧾 Also Known As</h2>
+<ul>
+<li><strong>Single Instance Pattern</strong></li>
+<li><strong>One Object Pattern</strong></li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 Applicability (When to Use)</h2>
+<p>Use the Singleton pattern when:</p>
+<ul>
+<li>You need to control access to a shared resource.</li>
+<li>You want to restrict the instantiation of a class to <strong>one instance only</strong>.</li>
+<li>You need a global access point to that single instance.</li>
+<li>You want to ensure that there is <strong>only one object</strong> managing a resource throughout the application's lifecycle, such as logging or configuration settings.</li>
+</ul>
+<p>(Reference: GoF, Page 128)</p>
+<hr>
+<h2 id="%F0%9F%91%A5-participants-gof-book-page-130">👥 Participants (GoF Book, Page 130)</h2>
+<ol>
+<li><strong>Singleton</strong></li>
+</ol>
+<ul>
+<li>Ensures that only one instance of the class is created and provides a global point of access to that instance.</li>
+</ul>
+<ol start="2">
+<li><strong>Client</strong></li>
+</ol>
+<ul>
+<li>Accesses the singleton instance to interact with the resource managed by the Singleton class.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%A0%EF%B8%8F-consequences-gof-book-page-131">⚠️ Consequences (GoF Book, Page 131)</h2>
+<ul>
+<li>✅ <strong>Controlled access to the sole instance</strong>: Ensures that the Singleton class is the only one providing access to the resource.</li>
+<li>✅ <strong>Lazy instantiation</strong>: The Singleton object can be created when it's first needed, not necessarily when the program starts.</li>
+<li>✅ <strong>Global point of access</strong>: The singleton instance can be accessed from any part of the program.</li>
+<li>❌ <strong>Global state</strong>: Having a global point of access to a single instance can lead to tight coupling and difficulty in testing because the Singleton class essentially becomes a global object.</li>
+<li>❌ <strong>Single responsibility</strong>: The Singleton pattern can violate the <strong>Single Responsibility Principle (SRP)</strong> if the singleton class handles too much functionality. The global nature of the Singleton may also make the system harder to maintain.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns-gof-book-page-134">🔗 Related Patterns (GoF Book, Page 134)</h2>
+<table>
+<thead>
+<tr>
+<th>Related Pattern</th>
+<th>Why Related?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Factory Method</strong></td>
+<td>Singleton can sometimes be combined with Factory Methods to manage the instantiation process of a single instance in a controlled way.</td>
+</tr>
+<tr>
+<td><strong>Abstract Factory</strong></td>
+<td>If you need to ensure a single instance of a factory, you can use the Singleton pattern to enforce this behavior.</td>
+</tr>
+<tr>
+<td><strong>Proxy</strong></td>
+<td>A Proxy pattern can be used to manage access to the Singleton, especially if access control is needed to ensure only one client at a time interacts with it.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%E2%9D%93-why-use-this-pattern">❓ Why Use This Pattern?</h2>
+<p>The <strong>Singleton pattern</strong> is used when there is a need to manage shared resources, such as database connections, configuration settings, logging, etc., throughout the application. This ensures that these resources are only initialized once and can be accessed globally.</p>
+<h3 id="reasons-for-using-singleton-pattern">Reasons for Using Singleton Pattern:</h3>
+<ol>
+<li><strong>Global Access</strong>: It provides a global point of access to the unique instance.</li>
+<li><strong>Control over Resource Management</strong>: It ensures that only one instance of the resource is ever created, saving system resources and simplifying the code.</li>
+<li><strong>Lazy Initialization</strong>: The Singleton instance is created only when it is needed, which can optimize resource usage and application startup time.</li>
+</ol>
+<hr>
+<h2 id="%F0%9F%A7%A0-principles-used-in-singleton-pattern">🧠 Principles Used in Singleton Pattern</h2>
+<h3 id="1-single-responsibility-principle-srp">1. <strong>Single Responsibility Principle (SRP)</strong></h3>
+<ul>
+<li>The Singleton ensures that the responsibility of managing the resource is given to a single class, making it easier to maintain. However, if the Singleton class takes on too many responsibilities, it can violate SRP.</li>
+</ul>
+<h3 id="2-lazy-initialization">2. <strong>Lazy Initialization</strong></h3>
+<ul>
+<li>Singleton can be initialized only when it’s needed. This principle helps in saving memory and improving the startup performance of the application.</li>
+</ul>
+<h3 id="3-encapsulation">3. <strong>Encapsulation</strong></h3>
+<ul>
+<li>The Singleton pattern encapsulates the logic of object creation and access. Clients don’t need to know how the instance is created, only that they can access it globally.</li>
+</ul>
+<hr>
+<h1 id="%F0%9F%8F%97%EF%B8%8Fstructural-patterns">🏗️Structural Patterns</h1>
+<h1 id="%F0%9F%A7%B0-decorator-pattern">🧰 Decorator Pattern</h1>
+<hr>
+<h2 id="%F0%9F%93%8C-intent">📌 <strong>Intent</strong></h2>
+<p>The <strong>Decorator Pattern</strong> allows you to dynamically add behavior to an object at runtime, without altering its structure. It provides a flexible alternative to subclassing for extending functionality.</p>
+<blockquote>
+<p><strong>Intent (GoF):</strong><br>
+<em>&quot;Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.&quot;</em></p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%93%9D-also-known-as">📝 <strong>Also Known As</strong></h2>
+<ul>
+<li><strong>Wrapper</strong> (Sometimes used as a synonym in certain contexts)</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 <strong>Applicability (When to Use)</strong></h2>
+<p>Use the <strong>Decorator Pattern</strong> when:</p>
+<ol>
+<li>You want to add responsibilities to objects dynamically and selectively.</li>
+<li>You want to extend the behavior of classes in a flexible and reusable way.</li>
+<li>Subclassing is impractical or undesirable due to an explosion of subclasses for every combination of behaviors.</li>
+</ol>
+<hr>
+<h2 id="%F0%9F%8F%97%EF%B8%8F-structure-diagram">🏗️ <strong>Structure Diagram</strong></h2>
+<p>(Refer to GoF's book for detailed structural diagrams of the Decorator Pattern. The structure typically involves the <strong>Component</strong>, <strong>ConcreteComponent</strong>, <strong>Decorator</strong>, and <strong>ConcreteDecorator</strong> classes.)</p>
+<hr>
+<h2 id="%F0%9F%91%A5-participants">👥 <strong>Participants</strong></h2>
+<ol>
+<li><strong>Component</strong>:</li>
+</ol>
+<ul>
+<li>Defines the interface that is common to all objects that can have responsibilities added to them dynamically.</li>
+</ul>
+<ol start="2">
+<li><strong>ConcreteComponent</strong>:</li>
+</ol>
+<ul>
+<li>Implements the <strong>Component</strong> interface and defines the core functionality.</li>
+</ul>
+<ol start="3">
+<li><strong>Decorator</strong>:</li>
+</ol>
+<ul>
+<li>Implements the <strong>Component</strong> interface and contains a reference to a <strong>Component</strong> object. It delegates requests to the <strong>Component</strong> and may add additional behavior.</li>
+</ul>
+<ol start="4">
+<li><strong>ConcreteDecorator</strong>:</li>
+</ol>
+<ul>
+<li>A subclass of <strong>Decorator</strong> that adds responsibilities to the <strong>ConcreteComponent</strong>.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%A0%EF%B8%8F-consequences-gof">⚠️ <strong>Consequences (GoF)</strong></h2>
+<ul>
+<li>
+<p>✅ <strong>Favorable Consequences</strong>:</p>
+<ul>
+<li><strong>Extensibility</strong>: It allows functionality to be added to individual objects at runtime.</li>
+<li><strong>Flexibility</strong>: You can combine different decorators to add varied functionality without modifying the object itself.</li>
+<li><strong>Code Reusability</strong>: It promotes code reuse by allowing new functionality to be added without modifying existing code.</li>
+</ul>
+</li>
+<li>
+<p>❌ <strong>Unfavorable Consequences</strong>:</p>
+<ul>
+<li><strong>Complexity</strong>: It can introduce many small classes, leading to increased complexity in the system.</li>
+<li><strong>Overhead</strong>: The dynamic nature of decorators may lead to slight performance overhead.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns-gof">🔗 <strong>Related Patterns (GoF)</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Related Pattern</strong></th>
+<th><strong>Why Related?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adapter</strong></td>
+<td>Both <strong>Adapter</strong> and <strong>Decorator</strong> provide ways to add functionality, but the main difference is that <strong>Adapter</strong> changes the interface to make it compatible, while <strong>Decorator</strong> adds responsibilities to the object dynamically.</td>
+</tr>
+<tr>
+<td><strong>Composite</strong></td>
+<td><strong>Composite</strong> and <strong>Decorator</strong> both involve treating individual objects and compositions of objects uniformly. However, <strong>Composite</strong> deals with structuring objects in a tree, while <strong>Decorator</strong> adds behavior to objects.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%8E%AF-why-use-this-pattern">🎯 <strong>Why Use This Pattern?</strong></h2>
+<p>The <strong>Decorator Pattern</strong> is useful when you want to add additional behavior to an object, but subclassing is not a feasible option due to the combinatorial explosion of subclasses or because you need the flexibility to add and remove behaviors at runtime. By using decorators, you can compose new behaviors without altering existing code.</p>
+<hr>
+<h2 id="%F0%9F%92%A1-principle-applied">💡 <strong>Principle Applied</strong></h2>
+<p><strong>Favor Composition Over Inheritance</strong>:<br>
+The <strong>Decorator Pattern</strong> applies the principle of <strong>composition over inheritance</strong>. Instead of using inheritance to add new behavior, it uses composition to add functionality to objects dynamically, making it a more flexible and reusable design.</p>
+<hr>
+<h1 id="%F0%9F%A7%B0-facade-pattern">🧰 Facade Pattern</h1>
+<hr>
+<h2 id="%F0%9F%93%8C-intent">📌 <strong>Intent</strong></h2>
+<p>The <strong>Facade Pattern</strong> provides a simplified interface to a complex subsystem, hiding the complexities and making the subsystem easier to use for the client. It provides a higher-level interface that makes the subsystem easier to access and interact with.</p>
+<blockquote>
+<p><strong>Intent (GoF):</strong><br>
+<em>&quot;Provide a unified interface to a set of interfaces in a subsystem. Façade defines a higher-level interface that makes the subsystem easier to use.&quot;</em></p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%93%9D-also-known-as">📝 <strong>Also Known As</strong></h2>
+<ul>
+<li><strong>Facade</strong></li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 <strong>Applicability (When to Use)</strong></h2>
+<p>Use the <strong>Facade Pattern</strong> when:</p>
+<ol>
+<li>You need to provide a simple interface to a complex subsystem of classes.</li>
+<li>You want to reduce dependencies and simplify interaction with the system for clients.</li>
+<li>You need to make a system easier to use by decoupling the client code from complex subsystem components.</li>
+</ol>
+<hr>
+<h2 id="%F0%9F%8F%97%EF%B8%8F-structure-diagram">🏗️ <strong>Structure Diagram</strong></h2>
+<p>(Refer to GoF's book for detailed structural diagrams of the Façade Pattern. The structure typically involves <strong>Facade</strong> and <strong>Subsystem</strong> classes.)</p>
+<hr>
+<h2 id="%F0%9F%91%A5-participants">👥 <strong>Participants</strong></h2>
+<ol>
+<li><strong>Facade</strong>:</li>
+</ol>
+<ul>
+<li>Defines a simplified interface to the subsystem. It delegates client requests to the appropriate subsystem components.</li>
+</ul>
+<ol start="2">
+<li><strong>Subsystem classes</strong>:</li>
+</ol>
+<ul>
+<li>These classes implement the subsystem functionality. The <strong>Facade</strong> delegates client requests to them, simplifying the interaction with these components.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%A0%EF%B8%8F-consequences-gof">⚠️ <strong>Consequences (GoF)</strong></h2>
+<ul>
+<li>
+<p>✅ <strong>Favorable Consequences</strong>:</p>
+<ul>
+<li><strong>Simplified interface</strong>: Reduces the complexity for the client by providing a simplified interface to the subsystem.</li>
+<li><strong>Loose coupling</strong>: Clients are decoupled from the subsystem, which reduces dependencies and makes the system easier to maintain.</li>
+<li><strong>Easy integration</strong>: A Façade can be used to integrate multiple subsystems into a single interface.</li>
+</ul>
+</li>
+<li>
+<p>❌ <strong>Unfavorable Consequences</strong>:</p>
+<ul>
+<li><strong>Potential for oversimplification</strong>: If the Façade becomes too abstract, it may hide important functionality that the client may need access to.</li>
+<li><strong>Tight coupling to Façade</strong>: Clients become dependent on the Façade, which may limit flexibility in some cases.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns-gof">🔗 <strong>Related Patterns (GoF)</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Related Pattern</strong></th>
+<th><strong>Why Related?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adapter</strong></td>
+<td>Both <strong>Facade</strong> and <strong>Adapter</strong> simplify interfaces. However, <strong>Adapter</strong> works by changing the interface of an existing class, while <strong>Facade</strong> simplifies the interface to a group of classes.</td>
+</tr>
+<tr>
+<td><strong>Proxy</strong></td>
+<td>The <strong>Proxy</strong> pattern also provides a surrogate interface, but while the Façade simplifies access to a subsystem, the Proxy may be used for controlling access, lazy initialization, or other purposes.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%8E%AF-why-use-this-pattern">🎯 <strong>Why Use This Pattern?</strong></h2>
+<p>The <strong>Façade Pattern</strong> is useful when you want to reduce the complexity of interacting with a complex system. By providing a single, unified interface to the subsystem, it simplifies the process for the client and makes the system easier to maintain and integrate.</p>
+<hr>
+<h2 id="%F0%9F%92%A1-principle-applied">💡 <strong>Principle Applied</strong></h2>
+<p><strong>Encapsulation</strong>:<br>
+The <strong>Façade Pattern</strong> adheres to the principle of <strong>Encapsulation</strong> by hiding the complexities of the subsystem from the client. This allows the subsystem's internal structure to change without affecting the client code, which only interacts with the simplified interface provided by the Façade.</p>
+<hr>
+<h1 id="%F0%9F%9B%A1%EF%B8%8F-proxy-pattern">🛡️ Proxy Pattern</h1>
+<hr>
+<h2 id="%F0%9F%93%8C-intent">📌 <strong>Intent</strong></h2>
+<p>The <strong>Proxy Pattern</strong> provides a surrogate or placeholder for another object to control access to it. This control can include access control, lazy initialization, logging, remote access, and more.</p>
+<blockquote>
+<p><strong>Intent (GoF):</strong><br>
+<em>&quot;Provide a surrogate or placeholder for another object to control access to it.&quot;</em></p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%93%9D-also-known-as">📝 <strong>Also Known As</strong></h2>
+<ul>
+<li>Surrogate</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 <strong>Applicability (When to Use)</strong></h2>
+<p>Use the <strong>Proxy Pattern</strong> when:</p>
+<ol>
+<li>You need to <strong>control access</strong> to an object for reasons like security, logging, or lazy loading.</li>
+<li>The object is <strong>expensive to create</strong>, and you want to instantiate it only when necessary (Virtual Proxy).</li>
+<li>The object is located <strong>remotely</strong>, and a local object represents it (Remote Proxy).</li>
+<li>You want to add functionality like <strong>caching or counting references</strong> (Smart Reference Proxy).</li>
+</ol>
+<hr>
+<h2 id="%F0%9F%91%A5-participants">👥 <strong>Participants</strong></h2>
+<ol>
+<li><strong>Subject (Interface)</strong>:</li>
+</ol>
+<ul>
+<li>Declares the common interface for RealSubject and Proxy so they can be used interchangeably.</li>
+</ul>
+<ol start="2">
+<li><strong>RealSubject</strong>:</li>
+</ol>
+<ul>
+<li>The real object that the proxy represents and to which it delegates the requests.</li>
+</ul>
+<ol start="3">
+<li><strong>Proxy</strong>:</li>
+</ol>
+<ul>
+<li>Maintains a reference to the RealSubject and controls access to it. It may also add additional behavior.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%A0%EF%B8%8F-consequences-gof">⚠️ <strong>Consequences (GoF)</strong></h2>
+<ul>
+<li>
+<p>✅ <strong>Favorable Consequences</strong>:</p>
+<ul>
+<li><strong>Access control</strong>: You can control access to the object (e.g., authentication).</li>
+<li><strong>Performance optimization</strong>: Delay the creation of costly objects (lazy loading).</li>
+<li><strong>Additional behavior</strong>: Add functionality without modifying the real subject.</li>
+</ul>
+</li>
+<li>
+<p>❌ <strong>Unfavorable Consequences</strong>:</p>
+<ul>
+<li><strong>Increased complexity</strong>: Adds extra classes and layers of indirection.</li>
+<li><strong>Overhead</strong>: May introduce performance overhead, especially if the proxy is not lightweight.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%A7%BE-types-of-proxy">🧾 <strong>Types of Proxy</strong></h2>
+<ol>
+<li><strong>Virtual Proxy</strong>:</li>
+</ol>
+<ul>
+<li>Delays creation and initialization of expensive objects.</li>
+</ul>
+<ol start="2">
+<li><strong>Remote Proxy</strong>:</li>
+</ol>
+<ul>
+<li>Represents an object in a different address space (e.g., server).</li>
+</ul>
+<ol start="3">
+<li><strong>Protection Proxy</strong>:</li>
+</ol>
+<ul>
+<li>Controls access based on access rights.</li>
+</ul>
+<ol start="4">
+<li><strong>Smart Reference Proxy</strong>:</li>
+</ol>
+<ul>
+<li>Adds extra behavior when the object is accessed (e.g., logging, counting).</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns-gof">🔗 <strong>Related Patterns (GoF)</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Related Pattern</strong></th>
+<th><strong>Why Related?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Decorator</strong></td>
+<td>Both add behavior, but Decorator enhances behavior of the object, while Proxy controls access.</td>
+</tr>
+<tr>
+<td><strong>Adapter</strong></td>
+<td>Both involve wrapping another class, but Adapter changes the interface while Proxy controls access.</td>
+</tr>
+<tr>
+<td><strong>Façade</strong></td>
+<td>Façade simplifies access to subsystems, Proxy controls access to specific objects.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%F0%9F%8E%AF-why-use-this-pattern">🎯 <strong>Why Use This Pattern?</strong></h2>
+<p>The <strong>Proxy Pattern</strong> is useful when you want to <strong>add a layer of control</strong> over how and when clients interact with a particular object. This is especially important when dealing with remote objects, expensive object creation, or when enforcing access permissions.</p>
+<hr>
+<h2 id="%F0%9F%92%A1-principle-applied">💡 <strong>Principle Applied</strong></h2>
+<p><strong>Single Responsibility Principle (SRP)</strong>:<br>
+The Proxy Pattern separates the responsibility of access control or additional behavior from the actual business logic of the object (RealSubject). Each class has a clear responsibility: the proxy manages access, and the real subject performs the core functionality.</p>
+<hr>
+<h1 id="%F0%9F%94%81behavioral-patterns">🔁Behavioral Patterns</h1>
+<h1 id="%F0%9F%94%81-chain-of-responsibility-pattern">🔁 Chain of Responsibility Pattern</h1>
+<hr>
+<h2 id="%F0%9F%93%8C-intent">📌 Intent</h2>
+<blockquote>
+<p><strong>“Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.<br>
+Chain the receiving objects and pass the request along the chain until an object handles it.”</strong><br>
+— <em>Design Patterns: Elements of Reusable Object-Oriented Software (GoF)</em></p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%A7%BE-also-known-as">🧾 Also Known As</h2>
+<ul>
+<li>CoR</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 Applicability (When to Use)</h2>
+<p>Use the Chain of Responsibility pattern when:</p>
+<ul>
+<li>More than one object may handle a request, and the handler isn't known in advance.</li>
+<li>You want to decouple the sender and receiver of a request.</li>
+<li>You want to issue a request to multiple objects without specifying the receiver explicitly.</li>
+<li>The set of handlers should be specified dynamically.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%91%A5-participants-gof-book">👥 Participants (GoF Book)</h2>
+<ol>
+<li><strong>Handler (Abstract Class or Interface)</strong></li>
+</ol>
+<ul>
+<li>Defines an interface for handling requests.</li>
+<li>Optionally implements the successor link (next handler).</li>
+</ul>
+<ol start="2">
+<li><strong>ConcreteHandler</strong></li>
+</ol>
+<ul>
+<li>Handles the request or forwards it to the next handler.</li>
+</ul>
+<ol start="3">
+<li><strong>Client</strong></li>
+</ol>
+<ul>
+<li>Initiates and configures the chain of handlers.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%96%EF%B8%8F-consequences-gof-book">⚖️ Consequences (GoF Book)</h2>
+<ul>
+<li>✅ Loose coupling between sender and receiver.</li>
+<li>✅ New handlers can be added easily without modifying existing code.</li>
+<li>✅ Simplifies the object that sends the request.</li>
+<li>❌ No guarantee that every request will be handled unless a default handler is provided.</li>
+<li>❌ Can be hard to follow the request path when debugging.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns">🔗 Related Patterns</h2>
+<table>
+<thead>
+<tr>
+<th>Related Pattern</th>
+<th>Why Related?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Composite</strong></td>
+<td>CoR can use a tree structure for handlers.</td>
+</tr>
+<tr>
+<td><strong>Command</strong></td>
+<td>Command objects can be processed by a chain of handlers.</td>
+</tr>
+<tr>
+<td><strong>Decorator</strong></td>
+<td>Both can modify behavior dynamically and rely on recursive structures.</td>
+</tr>
+<tr>
+<td><strong>Mediator</strong></td>
+<td>Mediator centralizes control; CoR distributes it across the chain.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%E2%9D%93-why-use-this-pattern">❓ Why Use This Pattern?</h2>
+<ul>
+<li>To <strong>avoid tight coupling</strong> between request senders and receivers.</li>
+<li>To <strong>delegate responsibility</strong> across a chain of objects dynamically.</li>
+<li>To promote <strong>Open/Closed Principle</strong> by allowing new handlers to be added without changing existing code.</li>
+<li>To make the <strong>request processing flexible</strong> and configurable at runtime.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%A7%AD-principle-used">🧭 Principle Used</h2>
+<h3 id="%F0%9F%93%98-single-responsibility-principle-srp">📘 Single Responsibility Principle (SRP)</h3>
+<blockquote>
+<p>Each handler class has <strong>one reason to change</strong> — how it handles the request.</p>
+</blockquote>
+<h3 id="%F0%9F%93%98-openclosed-principle-ocp">📘 Open/Closed Principle (OCP)</h3>
+<blockquote>
+<p>You can <strong>add new handlers</strong> to the chain without changing existing ones.</p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%9A%80-getting-started">🚀 Getting Started</h2>
+<ol>
+<li><strong>Clone the Repository</strong>:<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/SonaniAkshit/Design-Patterns-Java.git
+<span class="hljs-built_in">cd</span> Design-Patterns-Java
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h1 id="%F0%9F%94%81-state-pattern">🔁 State Pattern</h1>
+<hr>
+<h2 id="%F0%9F%93%8C-intent">📌 Intent</h2>
+<blockquote>
+<p><strong>“Allow an object to alter its behavior when its internal state changes.<br>
+The object will appear to change its class.”</strong><br>
+— <em>Design Patterns: Elements of Reusable Object-Oriented Software (GoF)</em></p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%A7%BE-also-known-as">🧾 Also Known As</h2>
+<ul>
+<li>Objects for States</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 Applicability (When to Use)</h2>
+<p>Use the <strong>State pattern</strong> when:</p>
+<ul>
+<li>An object’s behavior depends on its state, and it must change its behavior at runtime depending on that state.</li>
+<li>Code has numerous <code>if</code> or <code>switch</code> statements based on object state.</li>
+<li>You want to avoid cluttering a single class with behavior for many states.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%91%A5-participants-gof-book">👥 Participants (GoF Book)</h2>
+<ol>
+<li><strong>Context</strong></li>
+</ol>
+<ul>
+<li>Maintains an instance of a ConcreteState subclass that defines the current state.</li>
+<li>Allows clients to change the state of the object.</li>
+</ul>
+<ol start="2">
+<li><strong>State (Interface or Abstract Class)</strong></li>
+</ol>
+<ul>
+<li>Defines an interface for encapsulating behavior associated with a particular state of the Context.</li>
+</ul>
+<ol start="3">
+<li><strong>ConcreteState</strong></li>
+</ol>
+<ul>
+<li>Implements behavior associated with a state of the Context.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%96%EF%B8%8F-consequences-gof-book">⚖️ Consequences (GoF Book)</h2>
+<ul>
+<li>✅ <strong>Organizes state-specific behavior</strong> into separate classes.</li>
+<li>✅ Makes adding new states easy by creating new subclasses.</li>
+<li>✅ Eliminates conditional statements in the context class.</li>
+<li>✅ Improves code clarity by separating state-specific logic.</li>
+<li>❌ Can result in many small classes.</li>
+<li>❌ Context can become dependent on state subclasses.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns">🔗 Related Patterns</h2>
+<table>
+<thead>
+<tr>
+<th>Related Pattern</th>
+<th>Why Related?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strategy</strong></td>
+<td>Similar structure, but State transitions are automatic; Strategy is chosen explicitly.</td>
+</tr>
+<tr>
+<td><strong>Flyweight</strong></td>
+<td>Flyweight can be used to share state objects.</td>
+</tr>
+<tr>
+<td><strong>Observer</strong></td>
+<td>State objects can notify observers when the state changes.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%E2%9D%93-why-use-this-pattern">❓ Why Use This Pattern?</h2>
+<ul>
+<li>To <strong>cleanly separate behaviors</strong> based on object state.</li>
+<li>To <strong>eliminate long chains of conditionals</strong> in code (e.g., <code>if-else</code>, <code>switch</code>).</li>
+<li>To make code <strong>easier to maintain and extend</strong> by adding new states as new classes.</li>
+<li>To let the object <strong>change behavior dynamically</strong> without changing the class.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%A7%AD-principle-used">🧭 Principle Used</h2>
+<h3 id="%F0%9F%93%98-openclosed-principle-ocp">📘 Open/Closed Principle (OCP)</h3>
+<blockquote>
+<p>New states can be added without modifying the context class.</p>
+</blockquote>
+<h3 id="%F0%9F%93%98-single-responsibility-principle-srp">📘 Single Responsibility Principle (SRP)</h3>
+<blockquote>
+<p>Each state class encapsulates behavior specific to a single state.</p>
+</blockquote>
+<hr>
+<h1 id="%F0%9F%94%81-strategy-pattern">🔁 Strategy Pattern</h1>
+<hr>
+<h2 id="%F0%9F%93%8C-intent">📌 Intent</h2>
+<blockquote>
+<p><strong>&quot;Define a family of algorithms, encapsulate each one, and make them interchangeable.<br>
+Strategy lets the algorithm vary independently from clients that use it.&quot;</strong><br>
+— <em>Design Patterns: Elements of Reusable Object-Oriented Software (GoF)</em></p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%A7%BE-also-known-as">🧾 Also Known As</h2>
+<ul>
+<li>Policy</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 Applicability (When to Use)</h2>
+<p>Use the <strong>Strategy pattern</strong> when:</p>
+<ul>
+<li>You need to define multiple variants of an algorithm or behavior.</li>
+<li>You want to avoid using many conditional statements (like <code>if</code>, <code>else</code>, or <code>switch</code>).</li>
+<li>Different behaviors are required based on context, but you want to <strong>encapsulate</strong> them separately.</li>
+<li>You want to enable <strong>selecting an algorithm at runtime</strong>.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%91%A5-participants-gof-book">👥 Participants (GoF Book)</h2>
+<ol>
+<li><strong>Strategy (Interface or Abstract Class)</strong></li>
+</ol>
+<ul>
+<li>Declares an interface common to all supported algorithms.</li>
+</ul>
+<ol start="2">
+<li><strong>ConcreteStrategy</strong></li>
+</ol>
+<ul>
+<li>Implements the algorithm using the Strategy interface.</li>
+</ul>
+<ol start="3">
+<li><strong>Context</strong></li>
+</ol>
+<ul>
+<li>Maintains a reference to a Strategy object.</li>
+<li>May allow clients to set or change the Strategy object at runtime.</li>
+<li>Delegates behavior to the Strategy object.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%96%EF%B8%8F-consequences-gof-book">⚖️ Consequences (GoF Book)</h2>
+<ul>
+<li>✅ Promotes <strong>flexibility and reusability</strong> of algorithms.</li>
+<li>✅ Eliminates conditional logic for selecting behavior.</li>
+<li>✅ Makes unit testing easier by isolating each strategy.</li>
+<li>❌ Increases the number of classes.</li>
+<li>❌ Clients must understand differences between strategies to select appropriately.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns">🔗 Related Patterns</h2>
+<table>
+<thead>
+<tr>
+<th>Related Pattern</th>
+<th>Why Related?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State</strong></td>
+<td>Similar structure, but Strategy is chosen by the client, while State changes automatically.</td>
+</tr>
+<tr>
+<td><strong>Decorator</strong></td>
+<td>Strategy can be combined with Decorator for dynamic behavior selection and layering.</td>
+</tr>
+<tr>
+<td><strong>Factory Method</strong></td>
+<td>Can be used to instantiate specific strategies.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%E2%9D%93-why-use-this-pattern">❓ Why Use This Pattern?</h2>
+<ul>
+<li>To <strong>decouple algorithms</strong> from the classes that use them.</li>
+<li>To <strong>change behavior dynamically</strong> at runtime without modifying existing code.</li>
+<li>To <strong>encapsulate behaviors</strong> for better organization, testing, and maintenance.</li>
+<li>To allow <strong>multiple interchangeable behaviors</strong>, such as different sorting, payment, or formatting strategies.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%A7%AD-principle-used">🧭 Principle Used</h2>
+<h3 id="%F0%9F%93%98-openclosed-principle-ocp">📘 Open/Closed Principle (OCP)</h3>
+<blockquote>
+<p>You can introduce new strategies (algorithms) without modifying the existing code.</p>
+</blockquote>
+<h3 id="%F0%9F%93%98-single-responsibility-principle-srp">📘 Single Responsibility Principle (SRP)</h3>
+<blockquote>
+<p>Each strategy has one responsibility: implementing a single algorithm.</p>
+</blockquote>
+<hr>
+<h1 id="%F0%9F%94%81-observer-pattern">🔁 Observer Pattern</h1>
+<hr>
+<h2 id="%F0%9F%93%8C-intent">📌 Intent</h2>
+<blockquote>
+<p><strong>&quot;Define a one-to-many dependency between objects so that when one object changes state,<br>
+all its dependents are notified and updated automatically.&quot;</strong><br>
+— <em>Design Patterns: Elements of Reusable Object-Oriented Software (GoF)</em></p>
+</blockquote>
+<hr>
+<h2 id="%F0%9F%A7%BE-also-known-as">🧾 Also Known As</h2>
+<ul>
+<li>Publish-Subscribe</li>
+<li>Dependents</li>
+<li>Listener</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%93%88-applicability-when-to-use">📈 Applicability (When to Use)</h2>
+<p>Use the <strong>Observer pattern</strong> when:</p>
+<ul>
+<li>One object (subject) needs to notify other objects (observers) about changes without being tightly coupled.</li>
+<li>You want to implement <strong>event-driven systems</strong> (e.g., GUI frameworks, messaging, real-time updates).</li>
+<li>The number and types of dependents (observers) are unknown at compile time and may change at runtime.</li>
+<li>You need a clean way to <strong>decouple</strong> publishers from subscribers.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%91%A5-participants-gof-book">👥 Participants (GoF Book)</h2>
+<ol>
+<li><strong>Subject (Observable)</strong></li>
+</ol>
+<ul>
+<li>Maintains a list of observers.</li>
+<li>Provides methods to attach, detach, and notify observers.</li>
+</ul>
+<ol start="2">
+<li><strong>Observer</strong></li>
+</ol>
+<ul>
+<li>Defines an interface for objects that should be notified of subject changes.</li>
+</ul>
+<ol start="3">
+<li><strong>ConcreteSubject</strong></li>
+</ol>
+<ul>
+<li>Stores state of interest to ConcreteObservers.</li>
+<li>Notifies observers when its state changes.</li>
+</ul>
+<ol start="4">
+<li><strong>ConcreteObserver</strong></li>
+</ol>
+<ul>
+<li>Implements the Observer interface.</li>
+<li>Updates its state to match the subject's state when notified.</li>
+</ul>
+<hr>
+<h2 id="%E2%9A%96%EF%B8%8F-consequences-gof-book">⚖️ Consequences (GoF Book)</h2>
+<ul>
+<li>✅ Promotes <strong>loose coupling</strong> between subject and observers.</li>
+<li>✅ Supports <strong>broadcast communication</strong> to multiple observers.</li>
+<li>✅ Easy to add or remove observers at runtime.</li>
+<li>❌ Can lead to unexpected updates if not carefully managed.</li>
+<li>❌ May cause performance issues if many observers are registered or frequent updates occur.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%94%97-related-patterns">🔗 Related Patterns</h2>
+<table>
+<thead>
+<tr>
+<th>Related Pattern</th>
+<th>Why Related?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mediator</strong></td>
+<td>Centralizes communication between objects instead of allowing direct notifications.</td>
+</tr>
+<tr>
+<td><strong>Singleton</strong></td>
+<td>The subject might be a Singleton so all observers reference the same instance.</td>
+</tr>
+<tr>
+<td><strong>Event Queue</strong></td>
+<td>Often used alongside observer to queue and handle notifications asynchronously.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="%E2%9D%93-why-use-this-pattern">❓ Why Use This Pattern?</h2>
+<ul>
+<li>To implement <strong>event systems</strong> where many objects must respond to changes in another.</li>
+<li>To keep <strong>components independent</strong>, yet allow them to <strong>communicate indirectly</strong>.</li>
+<li>To improve <strong>maintainability and scalability</strong> in applications that involve state changes and notifications.</li>
+<li>To implement <strong>reactive programming</strong> styles in UI frameworks, monitoring tools, messaging systems, etc.</li>
+</ul>
+<hr>
+<h2 id="%F0%9F%A7%AD-principle-used">🧭 Principle Used</h2>
+<h3 id="%F0%9F%93%98-principle-loosely-coupled-design">📘 Principle: Loosely Coupled Design</h3>
+<blockquote>
+<p>Subjects and observers are loosely coupled — the subject only knows that the observer implements a specific interface.</p>
+</blockquote>
+<h3 id="%F0%9F%93%98-openclosed-principle-ocp">📘 Open/Closed Principle (OCP)</h3>
+<blockquote>
+<p>New observers can be added without changing the subject.</p>
+</blockquote>
+<h3 id="%F0%9F%93%98-dependency-inversion-principle-dip">📘 Dependency Inversion Principle (DIP)</h3>
+<blockquote>
+<p>The subject and observers depend on abstractions (interfaces), not concrete implementations.</p>
+</blockquote>
+<hr>
+<p><img src="https://img.shields.io/badge/language-Java-blue.svg" alt="Java"></p>
+<p><img src="https://img.shields.io/github/stars/SonaniAkshit/Design-Pattern?style=social" alt="Stars"></p>
+
+</body>
+</html>
