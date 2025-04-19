@@ -21,8 +21,12 @@ In this example, a message is passed through a chain of handlers:
 
 ## 🧱 Structure Diagram
 
-                    +-----------+
-                    |  Handler  | 
+                          
+                          +----------+  
+                          |          |   
+                          *          |
+                    +-----------+    |   
+                    |  Handler  | ---+
                     +-----------+
                           ▲ 
                           |

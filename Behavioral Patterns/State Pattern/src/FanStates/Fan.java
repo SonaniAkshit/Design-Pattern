@@ -12,7 +12,7 @@ class Fan {
         state = newState;
     }
 
-    public void pressButton() {
+    public void requestFan() {
         state.pressButton(this);
     }
 }

@@ -5,9 +5,13 @@ public class Main {
     public static void main(String[] args) {
         Fan fan = new Fan();
 
-        fan.pressButton(); // OFF -> LOW
-        fan.pressButton(); // LOW -> HIGH
-        fan.pressButton(); // HIGH -> OFF
-        //fan.pressButton(); // OFF -> LOW
+        fan.setState(new OffState());
+        fan.requestFan(); // OFF -> LOW
+
+        fan.setState(new LowState());
+        fan.requestFan(); // LOW -> HIGH
+
+        fan.setState(new HighState());
+        fan.requestFan(); // HIGH -> OFF
     }
 }
