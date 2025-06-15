@@ -16,5 +16,8 @@ public class Snake {
     // Allow changing bite behavior at runtime
     public void setBiteBehavior(BiteBehavior biteBehavior) {
         this.biteBehavior = biteBehavior;
-    }
+    } /
 }
+
+
+// hello coders
